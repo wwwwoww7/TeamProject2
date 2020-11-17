@@ -1,7 +1,7 @@
 <%@ page contentType="text/html; charset=UTF-8"%>
 
 <aside>
-	<div id="sidebar" class="nav-collapse ">
+	<div id="sidebar" class="nav-collapse">
 		<ul class="sidebar-menu">
 			<li class="active">
 				<a class="" href="#"> 

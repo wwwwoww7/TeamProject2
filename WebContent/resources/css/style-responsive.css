@@ -231,6 +231,19 @@
 }
 
 @media (max-width: 480px) {
+	
+	.wrapper {
+
+	    background : white;
+	    display: inline-block;
+	
+	    margin-top: 200px;
+	
+	    padding: 15px;
+	
+	    width: 100%;
+
+	}
 
     .notification-row,.task_notificatoin_bar, .search-row,.knob-charts, .dont-show , .inbox-head .sr-input, .inbox-head .sr-btn{
         display: none;
@@ -273,7 +286,8 @@
      }
 }
 
-@media (max-width:320px) {
+@media (max-width:320px) { 
+
     .login-social-link a {
         padding: 15px 17px !important;
     }
@@ -318,6 +332,8 @@
     .chart-position {
         margin-top: 0px;
     }
+    
+    
 
 }
 

@@ -15,6 +15,10 @@
 		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
 		<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
 		<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+		<script src="<%=application.getContextPath()%>/resources/js/jquery.nicescroll.js" type="text/javascript"></script>
+		<script src="<%=application.getContextPath()%>/resources/js/jquery.slimscroll.min.js"></script>
+    	<script src="<%=application.getContextPath()%>/resources/js/jquery.autosize.min.js"></script> 
+		<script src="<%=application.getContextPath()%>/resources/js/scripts.js"></script>
 		<!-- bootstrap theme -->
 		<link href="<%=application.getContextPath()%>/resources/css/bootstrap-theme.css" rel="stylesheet">
 		<!--external css-->
@@ -24,8 +28,7 @@
 		<link href="<%=application.getContextPath()%>/resources/css/jquery-jvectormap-1.2.2.css" rel="stylesheet">
 		<!-- Custom styles -->
 		<link href="<%=application.getContextPath()%>/resources/css/style.css" rel="stylesheet"> 
-	
-	
+		<link href="<%=application.getContextPath()%>/resources/css/style-responsive.css" rel="stylesheet"> 
 	</head>
 	<body>
 		<!-- container section start -->

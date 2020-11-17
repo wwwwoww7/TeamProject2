@@ -52,7 +52,7 @@
 			        <div class="h-50">
 			
 			
-			          
+			          권지영
 			          main content 위치 <br/>
 			          <img src="<%=application.getContextPath()%>/resources/img/main.png"/>
 			

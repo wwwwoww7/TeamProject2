@@ -12,29 +12,24 @@
 	<div class="top-nav notification-row">
 		<ul class="nav pull-right top-menu">
 
-			<li id="task_notificatoin_bar" class="dropdown">
-				<a data-toggle="dropdown" class="dropdown-toggle" href="#"> 
-				<i class="">장</i> <span class="badge bg-important">6</span>
+			<li id="task_notificatoin_bar" class="dropdown"> 
+				<a href="#장바구니">
+					<i class="icon-cart"></i> <span class="badge bg-important">6</span>
 				</a>
 			</li>
 
 			<li class="dropdown">
-				<a data-toggle="dropdown" class="dropdown-toggle" href="#"> 
+				<a data-toggle="dropdown" class="dropdown-toggle" > 
 					<span class="profile-ava">
-						<img alt="" src="<%=application.getContextPath()%>/resources/img/avatar1_small.jpg">
+						<img alt="" width="36px" height="36px" src="<%=application.getContextPath()%>/resources/images/loppy.png">
 					</span> 
-					<span class="username">Jenifer Smith</span> 
+					<span class="username">닉네임</span> 
 					<b class="caret"></b>
 				</a>
 				<ul class="dropdown-menu extended logout">
 					<div class="log-arrow-up"></div>
-					<li class="eborder-top"><a href="#"><i class="icon_profile"></i> My Profile</a></li>
-					<li><a href="#"><i class="icon_mail_alt"></i> My Inbox</a></li>
-					<li><a href="#"><i class="icon_clock_alt"></i> Timeline</a></li>
-					<li><a href="#"><i class="icon_chat_alt"></i> Chats</a></li>
-					<li><a href="login.html"><i class="icon_key_alt"></i> LogOut</a></li>
-					<li><a href="#"><i class="icon_key_alt"></i>Documentation</a></li>
-					<li><a href="#"><i class="icon_key_alt"></i>Documentation</a></li>
+					<li class="eborder-top"><a href="login"><i class="icon_profile"></i> My Profile</a></li>
+					<li><a href="login"><i class="icon_key_alt"></i> LogOut</a></li>
 				</ul>
 			</li>
 		</ul>

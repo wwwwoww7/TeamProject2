@@ -77,8 +77,12 @@
 	display: inline-block !important;
 }
 
-
-
+.icon-cart {
+	background: url('../images/cart.png') no-repeat  ;	
+	width: 30px;
+	height: 25px;;
+	display: inline-block !important;
+}
 
 
 

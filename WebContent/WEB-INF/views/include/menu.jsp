@@ -11,13 +11,13 @@
 			</li>
 
 			<li>
-				<a class="" href="widgets.html"> 
+				<a class="" href="#"> 
 					<i class="icon_genius"></i>
 					<span>Menu2</span>
 				</a>
 			</li>
 			<li>
-				<a class="" href="chart-chartjs.html"> 
+				<a class="" href="#"> 
 					<i class="icon_piechart"></i> 
 					<span>Menu3</span>
 				</a>

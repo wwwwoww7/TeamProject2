@@ -19,5 +19,10 @@ public class HomeController {
 		logger.info("실행");
 		return "home";
 	} 
+	@RequestMapping("/login")   
+	public String login() {
+		logger.info("실행");
+		return "learn/login";
+	} 
 	
 }

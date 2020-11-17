@@ -580,9 +580,9 @@ ul.sidebar-menu li ul.sub li{
 
 ul.sidebar-menu li ul.sub li:last-child{
 
-    border-radius: 0 0 4px 4px;
+    border-radius: 0 0 0 0;
 
-    -webkit-border-radius: 0 0 4px 4px;
+    -webkit-border-radius: 0 0 0 0;
 
 }
 

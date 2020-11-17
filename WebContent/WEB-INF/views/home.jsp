@@ -16,7 +16,7 @@
 		<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
 		<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
 		<!-- bootstrap theme -->
-		<link href="<%=application.getContextPath()%>/resources/ss/bootstrap-theme.css" rel="stylesheet">
+		<link href="<%=application.getContextPath()%>/resources/css/bootstrap-theme.css" rel="stylesheet">
 		<!--external css-->
 		<!-- font icon -->
 		<link href="<%=application.getContextPath()%>/resources/css/elegant-icons-style.css" rel="stylesheet" />
@@ -28,47 +28,45 @@
 	
 	</head>
 	<body>
-		<div class="container">
+		<!-- container section start -->
+  		<section id="container" class="">
 			
 			<jsp:include page="/WEB-INF/views/include/header.jsp"/>
 			
-			
-			<div class="mainCenter">
-				<jsp:include page="/WEB-INF/views/include/menu.jsp"/>
-				<!--main content start-->
-			    <section id="main-content">
-			      <section class="wrapper">
-			        <!--overview start-->
-			        <div class="row">
-			          <div class="col-lg-12">
-			            <h3 class="page-header"><i class="fa fa-laptop"></i> Dashboard</h3>
-			            <ol class="breadcrumb">
-			              <li><i class="fa fa-home"></i><a href="index.html">Home</a></li>
-			              <li><i class="fa fa-laptop"></i>Dashboard</li>
-			            </ol>
-			          </div>
-			        </div>
-			        
-			        <div class="h-50">
-			
-			
-			         지영수정1
-			          main content 위치 <br/>
-			          <img src="<%=application.getContextPath()%>/resources/img/main.png"/>
-			
-			
-			
-			
-			
-			        </div> 
-			      	<jsp:include page="/WEB-INF/views/include/footer.jsp"/>
-			      
-			      </section>
+			<jsp:include page="/WEB-INF/views/include/menu.jsp"/>
+
+			<!--main content start-->
+			<section id="main-content">
+				<section class="wrapper">
+					<!--overview start-->
+					<div class="row">
+						<div class="col-lg-12">
+							<h3 class="page-header">
+								<i class="fa fa-laptop"></i> Title
+							</h3>
+							<ol class="breadcrumb">
+								<li><i class="fa fa-home"></i><a href="#">Home</a></li>
+								<li><i class="fa fa-laptop"></i>Title</li>
+							</ol>
+						</div>
+					</div>
+	
+					<div class="h-50">
+	
+	 						main content 위치 <br /> 
+	 						<img src="<%=application.getContextPath()%>/resources/img/main.png" />
+	
+	
+	
+	
+					</div>
+					<jsp:include page="/WEB-INF/views/include/footer.jsp" />
+	
 				</section>
-			</div>
-			
-			
-		
-		</div>
+			</section>
+
+
+
+		</section>
 	</body>
 </html>

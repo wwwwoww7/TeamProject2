@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+	
+	<!-- View 이름을 객체로 연결 시켜주는 객체 -->
+	<!-- id 안주면 class 첫자 소문자로 객체 이름 지정 -->
+	<bean id="viewResolver2"  
+		  class="org.springframework.web.servlet.view.BeanNameViewResolver">
+		  <property name="order" value="0"/> <!-- order 어떤놈이 응답 만들 놈인지...먼저 찾음 -->
+		  <!-- order : 순서 지정, controller가 return 한 view 이름을 
+		 			   viewResolver1 보다 먼저 해석 후, 없을 경우 viewResolver1에게 넘김  -->
+	</bean>
+	
+	
+</beans>

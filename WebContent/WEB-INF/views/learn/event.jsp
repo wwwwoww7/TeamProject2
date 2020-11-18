@@ -60,10 +60,10 @@
 							Event3
 	
 					</div>
-					<jsp:include page="/WEB-INF/views/include/footer.jsp" />
 	
 				</section>
 			</section>
+			<jsp:include page="/WEB-INF/views/include/footer.jsp" />
 
 
 

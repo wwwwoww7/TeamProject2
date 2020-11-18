@@ -78,9 +78,9 @@
 }
 
 .icon-cart {
-	background: url('../images/cart.png') no-repeat  ;	
-	width: 30px;
-	height: 25px;;
+	background: url('../images/cart.png')  ;	
+	width: 36px;
+	height: 36px;
 	display: inline-block !important;
 }
 

@@ -225,7 +225,12 @@
 
 
 @media (max-width: 740px) {
-    #task_notificatoin_bar,#mail_notificatoin_bar,#alert_notificatoin_bar{
+    /* #task_notificatoin_bar,#mail_notificatoin_bar,#alert_notificatoin_bar{
+        display: none;
+    } */
+}
+@media (max-width: 666px) {
+    .username{
         display: none;
     }
 }
@@ -237,7 +242,7 @@
 	    background : white;
 	    display: inline-block;
 	
-	    margin-top: 200px;
+	    margin-top: 145px;
 	
 	    padding: 15px;
 	

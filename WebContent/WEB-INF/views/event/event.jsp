@@ -40,40 +40,35 @@
 
 			<!--main content start-->
 			<section id="main-content">
-			
-			
-			
 				<section class="wrapper">
 					<!--overview start-->
 					<div class="row">
 						<div class="col-lg-12">
-							<h3 class="page-header">
-								<i class="fa fa-laptop"></i> Community
-							</h3>
+							<h2 class="page-header">
+								<i class="fa fa-laptop"></i> 이벤트
+							</h2>
 							<ol class="breadcrumb">
 								<li><i class="fa fa-home"></i><a href="#">Home</a></li>
-								<li><i class="fa fa-laptop"></i>Community</li>
+								<li><i class="fa fa-laptop"></i>Event</li>
 							</ol>
 						</div>
 					</div>
 	
-					<div class="row">
-			
-	 					Community1
-	 					Community2
-	 					Community3
-	
-	
-					</div>
-	
+					<div class="container-fluid border">
+						<h4>전체 이벤트</h4>
+  						<img src="<%=application.getContextPath()%>/resources/img/ar/hh.jpg" class="grid_item first" alt="Paris" width="304" height="236">	
+  						<p>100% 전액 환불 이벤트</p>   
+					
+  					
+  						<img src="<%=application.getContextPath()%>/resources/img/ar/ee.jpg" class="grid_item two"  alt="Paris" width="304" height="236">
+  						<p>얼리버드 이벤트</p> 
+  					
+					
+						<img src="<%=application.getContextPath()%>/resources/img/ar/aa.jpg" class="grid_item third" width="304" height="236">
+						<p>할인</p> 
+  					</div>	
+  					
 				</section>
-				
-				
-				
-				
-				
-				
-				
 			</section>
 			<jsp:include page="/WEB-INF/views/include/footer.jsp" />
 

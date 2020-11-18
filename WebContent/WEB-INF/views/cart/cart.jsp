@@ -30,6 +30,25 @@
 		<link href="<%=application.getContextPath()%>/resources/css/style.css" rel="stylesheet"> 
 		<link href="<%=application.getContextPath()%>/resources/css/style-responsive.css" rel="stylesheet"> 
 	</head>
+	<style>
+		
+		#bk_title {
+			font-size: 30px;
+			-webkit-border-radius: 0px;
+			-moz-border-radius: 0px;
+			border-radius: 0px;
+			height: 50px;
+			position: relative;
+			margin: 0 0 19px 0;
+			overflow: hidden;
+			opacity: 0.8;
+		}
+		#sm_title {
+			Font-size: 15px;
+			position: relative;
+			margin-right: 0;
+		}
+</style>
 	<script type="text/javascript">
 		$(function(){
 			$('#sidebar > ul').hide();
@@ -63,23 +82,36 @@
 					<div class="row">
 						<div class="col-lg-12">
 							<h3 class="page-header">
-								<i class="fa fa-laptop"></i> Cart
+								<i class="fa fa-shopping-cart fa-lg"></i> Cart
 							</h3>
 							<ol class="breadcrumb">
-								<li><i class="fa fa-home"></i><a href="#">Home</a></li>
-								<li><i class="fa fa-laptop"></i>Cart</li>
+								<li><i class="fa fa-home"></i><a href="<%=application.getContextPath()%>">Home</a></li>
+								<li><i class="fa fa-shopping-cart fa-lg"></i>Cart</li>
 							</ol>
 						</div>
 					</div>
 	
 					<div class="h-50">
-	
-	 					Cart1
-	 					Cart2
-	 					Cart3
-	
-	
+					<div class="col-lg-12">
+						<div id="basket">
+							<div id="bk_title">주문상품확인</div>
+							<span id="sm_title">01 장바구니 > <span>02 주문서작성/결제 > </span>03 주문완료</span>
+						</div>
+						<table>
+							<tr>
+								<th class="notice_title">상품/옵션 정보</th>
+								<th class="notice">수량</th>
+								<th class="notice">상품금액</th>
+								<th class="notice">할인/적립</th>
+								<th class="notice">합계금액</th>
+								<th class="notice">배송일정</th>
+							</tr>
+						</table>
 					</div>
+
+
+
+				</div>
 	
 				</section>
 				
@@ -87,6 +119,7 @@
 				
 				
 			</section>
+			
 			<jsp:include page="/WEB-INF/views/include/footer.jsp" />
 
 

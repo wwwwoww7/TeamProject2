@@ -40,28 +40,122 @@
 
 			<!--main content start-->
 			<section id="main-content">
+			
+			
+			
 				<section class="wrapper">
 					<!--overview start-->
 					<div class="row">
 						<div class="col-lg-12">
 							<h3 class="page-header">
-								<i class="fa fa-laptop"></i> Event
+								<i class="fa fa-laptop"></i> Community
 							</h3>
 							<ol class="breadcrumb">
 								<li><i class="fa fa-home"></i><a href="#">Home</a></li>
-								<li><i class="fa fa-laptop"></i>Event</li>
+								<li><i class="fa fa-laptop"></i>Community</li>
 							</ol>
 						</div>
 					</div>
 	
-					<div class="h-50">
-							Event1
-							Event2
-							Event3
-	
+					<div class="row">
+			
+	 				<!-- 표시 -->
+
+					<div class="container">
+						<ul class="nav nav-tabs">
+							<li class="nav-item"><a class="nav-link " href="javascript:fun1()">전체</a></li>
+								<script>
+									function fun1(){
+										$.ajax({
+											url : "join1" , 
+											success : function(data) {
+												$("#fun1_result").html(data)
+											}
+										});
+									}
+								</script>
+							<li class="nav-item"><a class="nav-link" href="#">건강</a></li>
+							<li class="nav-item"><a class="nav-link" href="#">커리어</a></li>
+							<li class="nav-item"><a class="nav-link" href="#">머니</a></li>
+							<li class="nav-item"><a class="nav-link" href="#">후기</a></li>
+						</ul>
+						
+						<div id="fun1_result"></div>
+					</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+					<!-- 표시2 -->
+					
+					
+					
+					
+					
+					
+					
+					
+					
+					
+					
+					
+					
+					
+					
+					
+					
+					
+					
+					
+					
+					
+					
+					
+					
+					
+					
+					
+					
+					
+					
+					
+					
+					
 					</div>
 	
 				</section>
+				
+				
+				
+				
+				
+				
+				
 			</section>
 			<jsp:include page="/WEB-INF/views/include/footer.jsp" />
 

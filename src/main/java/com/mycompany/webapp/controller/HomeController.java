@@ -60,7 +60,7 @@ public class HomeController {
 	
 	@GetMapping("/community")
 	public String community() {
-		return "learn/community";
+		return "community/community";
 	}
 	
 	

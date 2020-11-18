@@ -16,7 +16,7 @@
 		<ul class="nav pull-right top-menu">
 
 			<li id="task_notificatoin_bar" class="dropdown"> 
-				<a href="#장바구니">
+				<a href="cart">
 					<i class="icon-cart"></i> <span class="badge bg-important">6</span>
 				</a>
 			</li>

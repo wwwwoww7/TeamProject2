@@ -69,6 +69,10 @@ public class HomeController {
 		return "learn/event";
 	}
 	
+	@GetMapping("/cart")
+	public String cart() {
+		return "learn/cart";
+	}
 	
 	
 }

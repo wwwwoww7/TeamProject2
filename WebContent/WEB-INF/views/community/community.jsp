@@ -60,24 +60,63 @@
 					<div class="row">
 			
 	 				<!-- 표시 -->
-
 					<div class="container">
 						<ul class="nav nav-tabs">
 							<li class="nav-item"><a class="nav-link " href="javascript:fun1()">전체</a></li>
 								<script>
 									function fun1(){
 										$.ajax({
-											url : "join1" , 
+											url : "community/boardall" , 
 											success : function(data) {
-												$("#fun1_result").html(data)
+												$("#fun1_result").html(data);
 											}
 										});
 									}
 								</script>
-							<li class="nav-item"><a class="nav-link" href="#">건강</a></li>
-							<li class="nav-item"><a class="nav-link" href="#">커리어</a></li>
-							<li class="nav-item"><a class="nav-link" href="#">머니</a></li>
-							<li class="nav-item"><a class="nav-link" href="#">후기</a></li>
+							<li class="nav-item"><a class="nav-link" href="javascript:fun2()">건강</a></li>
+								<script>
+									function fun2(){
+										$.ajax({
+											url : "community/boardhealth" , 
+											success : function(data) {
+												$("#fun1_result").html(data);
+											}
+										});
+									}
+								</script>
+							<li class="nav-item"><a class="nav-link" href="javascript:fun3()">커리어</a></li>
+							<script>
+									function fun3(){
+										$.ajax({
+											url : "community/boardcareer" , 
+											success : function(data) {
+												$("#fun1_result").html(data);
+											}
+										});
+									}
+								</script>
+							<li class="nav-item"><a class="nav-link" href="javascript:fun4()">머니</a></li>
+							<script>
+									function fun4(){
+										$.ajax({
+											url : "community/boardmoney" , 
+											success : function(data) {
+												$("#fun1_result").html(data);
+											}
+										});
+									}
+								</script>
+							<li class="nav-item"><a class="nav-link" href="javascript:fun5()">후기</a></li>
+							<script>
+									function fun5(){
+										$.ajax({
+											url : "community/boardreview" , 
+											success : function(data) {
+												$("#fun1_result").html(data);
+											}
+										});
+									}
+								</script>
 						</ul>
 						
 						<div id="fun1_result"></div>

@@ -9909,7 +9909,6 @@ span.customSelect.changed {
 }
 
 
-
 /* 지은 추가 */
 
 .carousel-inner img {
@@ -9923,7 +9922,7 @@ span.customSelect.changed {
 	border-radius: 4px;
 	margin-bottom: 2em;
 	background: #f8f8f8;
-	text-align: center;
+	text-align: left;
 /* 	border: #d4c4e2 0.3em solid ; */
 	border-radius: 5px;
 	color: #1b1b1f;
@@ -9947,17 +9946,17 @@ span.customSelect.changed {
 /* 	} */
 
 	.box .inner {
-		padding: 1.5em;
+		padding: 0.2em;
 		width: 100% !important;
 	}
 
-		@media screen and (max-width: 480px) {
+	@media screen and (max-width: 480px) {
 
-			.box .inner {
-				padding: 1em;
-			}
-
+		.box .inner {
+			padding: 1em;
 		}
+
+	}
 
 	.box.alt {
 		border: 0;
@@ -9990,72 +9989,73 @@ span.customSelect.changed {
 		width: 20%;
 	}
 
-		@media screen and (max-width: 1280px) {
+	@media screen and (max-width: 1280px) {
 
-			.thumbnails .box {
-				width: 20%;
-			}
-
+		.thumbnails .box {
+			width: 20%;
 		}
 
-		@media screen and (max-width: 736px) {
+	}
 
-			.thumbnails .box {
-				width: 100%;
-			}
+	@media screen and (max-width: 736px) {
 
-		}
-		
-		.image {
-			border-radius: 4px;
-			border: 0;
-			display: inline-block;
-			position: relative;
-		}
-
-		.image img {
-			border-radius: 4px;
-			display: block;
-		}
-
-		.image.left, .image.right {
-			max-width: 40%;
-		}
-
-			.image.left img, .image.right img {
-				width: 100%;
-			}
-
-		.image.left {
-			float: left;
-			padding: 0 1.5em 1em 0;
-			top: 0.25em;
-		}
-
-		.image.right {
-			float: right;
-			padding: 0 0 1em 1.5em;
-			top: 0.25em;
-		}
-
-		.image.fit {
-			display: block;
-			margin: 0 0 2em 0;
+		.thumbnails .box {
 			width: 100%;
 		}
 
-			.image.fit img {
-				width: 100%;
-			}
+	}
+	
+	.image {
+		border-radius: 4px;
+		border: 0;
+		display: inline-block;
+		position: relative;
+	}
 
-		.image.main {
-			display: block;
-			margin: 0 0 3em 0;
+	.image img {
+		border-radius: 4px;
+		display: block;
+	}
+
+	.image.left, .image.right {
+		max-width: 40%;
+	}
+
+		.image.left img, .image.right img {
 			width: 100%;
 		}
 
-		.image.main img {
+	.image.left {
+		float: left;
+		padding: 0 1.5em 1em 0;
+		top: 0.25em;
+	}
+
+	.image.right {
+		float: right;
+		padding: 0 0 1em 1.5em;
+		top: 0.25em;
+	}
+
+	.image.fit {
+		display: block;
+		margin: 0 0 2em 0;
+		width: 100%;
+	}
+
+		.image.fit img {
 			width: 100%;
 		}
+
+	.image.main {
+		display: block;
+		margin: 0 0 3em 0;
+		width: 100%;
+	}
+
+	.image.main img {
+		width: 100%;
+	}
+	
 		
-		
+

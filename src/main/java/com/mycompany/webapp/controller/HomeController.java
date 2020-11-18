@@ -66,12 +66,12 @@ public class HomeController {
 	
 	@GetMapping("/event")
 	public String event() {
-		return "learn/event";
+		return "event/event";
 	}
 	
 	@GetMapping("/cart")
 	public String cart() {
-		return "learn/cart";
+		return "cart/cart";
 	}
 	 
 	

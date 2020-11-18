@@ -68,5 +68,10 @@ public class HomeController {
 	}
 	 
 	
+	@GetMapping("/classCardList")
+	public String classCardList() {
+		return "class/classcard";
+	}
+	
 	
 }

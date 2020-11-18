@@ -11,7 +11,7 @@
 				<script type="text/javascript">
 					function allCategory(){
 						$.ajax({
-							url: "allCategory",
+							url: "<%=request.getContextPath()%>/allCategory",
 							success: function(data){
 								$("#main-content").html(data);
 							}
@@ -30,7 +30,7 @@
 				<script type="text/javascript">
 					function health(){
 						$.ajax({
-							url: "health",
+							url: "<%=request.getContextPath()%>/health",
 							success: function(data){
 								$("#main-content").html(data);
 							}
@@ -47,7 +47,7 @@
 				<script type="text/javascript">
 					function career(){
 						$.ajax({
-							url: "career",
+							url: "<%=request.getContextPath()%>/career",
 							success: function(data){
 								$("#main-content").html(data);
 							}
@@ -63,7 +63,7 @@
 				<script type="text/javascript">
 					function money(){
 						$.ajax({
-							url: "money",
+							url: "<%=request.getContextPath()%>/money",
 							success: function(data){
 								$("#main-content").html(data);
 							}
@@ -72,13 +72,13 @@
 				</script>
 			</li>
 			<li>
-				<a class="" href="community"> 
+				<a class="" href="<%=request.getContextPath()%>/community"> 
 					<i class="icon_piechart"></i> 
 					<span>커뮤니티</span>
 				</a>
 			</li>
 			<li>
-				<a class="" href="event"> 
+				<a class="" href="<%=request.getContextPath()%>/event"> 
 					<i class="icon_piechart"></i> 
 					<span>이벤트</span>
 				</a>

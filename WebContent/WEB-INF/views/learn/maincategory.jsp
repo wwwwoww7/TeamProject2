@@ -18,38 +18,42 @@
 		
 	</div>
 	<div class="row">
-			<div id="demo" class="col-sm carousel slide" data-ride="carousel">
-
+		<div class="col">
+			<div id="demo" class="carousel slide" data-ride="carousel">
+				
 				<!-- Indicators -->
 				<ul class="carousel-indicators">
 					<li data-target="#demo" data-slide-to="0" class="active"></li>
 					<li data-target="#demo" data-slide-to="1"></li>
 					<li data-target="#demo" data-slide-to="2"></li>
 				</ul>
-	
+				
 				<!-- The slideshow -->
 				<div class="carousel-inner">
 					<div class="carousel-item active">
-						<img height="300px" src="<%=request.getContextPath()%>/resources/images/eventban3.jpg" alt="Los Angeles">
+						<img src="<%=request.getContextPath()%>/resources/images/eventban3.jpg" alt="Los Angeles" width="1100" height="500">
 					</div>
 					<div class="carousel-item">
-						<img height="300px" src="<%=request.getContextPath()%>/resources/images/eventban1.jpg" alt="Chicago">
+						<img src="<%=request.getContextPath()%>/resources/images/eventban1.jpg" alt="Chicago" width="1100" height="500">
 					</div>
 					<div class="carousel-item">
-						<img height="300px" src="<%=request.getContextPath()%>/resources/images/eventban1.jpg" alt="New York">
+						<img src="<%=request.getContextPath()%>/resources/images/eventban3.jpg" alt="New York" width="1100" height="500">
 					</div>
 				</div>
-	
+				
 				<!-- Left and right controls -->
 				<a class="carousel-control-prev" href="#demo" data-slide="prev">
 					<span class="carousel-control-prev-icon"></span>
 				</a> <a class="carousel-control-next" href="#demo" data-slide="next">
 					<span class="carousel-control-next-icon"></span>
 				</a>
-	
 			</div>
+
+
 		
 		
+		</div>
+			
 
 
 
@@ -80,51 +84,101 @@
 					<h4>지금, 인기 TOP10</h4>
 				</div>
 			</div>
+			<script type="text/javascript">
+			
+				function classCardListGet(){
+					$.ajax({
+						url:"classCardList",
+						success: function(data){
+							
+							$("#classCardList").html(data);
+						}
+						
+						
+					});
+					
+				}
+				
+				$(function(){ 
+					classCardListGet();
+					
+				});
+					
+
+			</script>
+			
+			<div id="classCardList" >
+						
+						
+			</div>
 			<div class="row" id="main">
+			
+				
+			
 				<div class="col-sm inner">
-					<div class="thumbnails">   
-						<div class="box">
-							<a href="https://youtu.be/Dn4iVuWDbF0" class="image fit">
-								<img src="<%=request.getContextPath()%>/resources/images/thumnails/video.png" alt="" />
-							</a>
-							<div class="inner">
-								<h3>Test</h3>
-								<p>[강의설명]간단하게</p>
-								<a href="https://youtu.be/Dn4iVuWDbF0" class="button fit" data-poptrox="youtube,800x400">수강하기</a>
+				
+					
+				
+				
+					<div class="thumbnails">
+					
+						
+					
+					
+					
+					
+					
+						<%-- <a href="class/classdetail">
+						
+							<div class="card" style="width: 200px">
+								<img class="card-img-top"
+									src="<%=request.getContextPath()%>/resources/images/thumnails/video.png"
+									alt="Card image" style="width: 100%">
+								<div class="card-body">
+									<h4 class="card-title">John Doe</h4>
+									<p class="card-text">Some example text some example text.
+										John Doe is an architect and engineer</p>
+									<a href="#" class="btn btn-primary">See Profile</a>
+								</div>
 							</div>
-						</div>
+						
+						</a>
+					
+						
 
-						<div class="box">
-							<a href="https://youtu.be/xotN5S2PmhA" class="image fit">
-								<img src="<%=request.getContextPath()%>/resources/images/thumnails/video02.png" alt="" />
-							</a>
-							<div class="inner">
-								<h3>Test</h3>
-								<p>[강의설명]간단하게</p>
-								<a href="https://youtu.be/xotN5S2PmhA" class="button style2 fit" data-poptrox="youtube,800x400">수강하기</a>
+						<div class="card" style="width: 200px">
+							<img class="card-img-top"
+								src="<%=request.getContextPath()%>/resources/images/thumnails/video02.png"
+								alt="Card image" style="width: 100%">
+							<div class="card-body">
+								<h4 class="card-title">John Doe</h4>
+								<p class="card-text">Some example text some example text.
+									John Doe is an architect and engineer</p>
+								<a href="#" class="btn btn-primary">See Profile</a>
 							</div>
 						</div>
-
-						<div class="box">
-							<a href="https://youtu.be/sQR02EEs054" class="image fit">
-								<img src="<%=request.getContextPath()%>/resources/images/thumnails/video03.png" alt="" />
-							</a>
-							<div class="inner">
-								<h3>Test</h3>
-								<p>[강의설명]간단하게</p>
-								<a href="https://youtu.be/sQR02EEs054" class="button style3 fit" data-poptrox="youtube,800x400">수강하기</a>
+						<div class="card" style="width: 200px">
+							<img class="card-img-top"
+								src="<%=request.getContextPath()%>/resources/images/thumnails/video03.png"
+								alt="Card image" style="width: 100%">
+							<div class="card-body">
+								<h4 class="card-title">John Doe</h4>
+								<p class="card-text">Some example text some example text.
+									John Doe is an architect and engineer</p>
+								<a href="#" class="btn btn-primary">See Profile</a>
 							</div>
 						</div>
-						<div class="box">
-							<a href="https://youtu.be/VNQpP6C1fJg" class="image fit">
-								<img src="<%=request.getContextPath()%>/resources/images/thumnails/video04.png" alt="" />
-							</a>
-							<div class="inner">
-								<h3>Test</h3>
-								<p>[강의설명]간단하게</p>
-								<a href="https://youtu.be/VNQpP6C1fJg" class="button style2 fit" data-poptrox="youtube,800x400">수강하기</a>
+						<div class="card" style="width: 200px">
+							<img class="card-img-top"
+								src="<%=request.getContextPath()%>/resources/images/thumnails/video04.png"
+								alt="Card image" style="width: 100%">
+							<div class="card-body">
+								<h4 class="card-title">John Doe</h4>
+								<p class="card-text">Some example text some example text.
+									John Doe is an architect and engineer</p>
+								<a href="#" class="btn btn-primary">See Profile</a>
 							</div>
-						</div> 
+						</div> --%>
 						
 					</div>
 				

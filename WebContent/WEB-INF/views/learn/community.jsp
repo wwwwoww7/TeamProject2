@@ -58,8 +58,8 @@
 					</div>
 	
 					<div class="row">
-	    test
-	 					Community1 
+			
+	 					Community1
 	 					Community2
 	 					Community3
 	

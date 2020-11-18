@@ -40,6 +40,9 @@
 
 			<!--main content start-->
 			<section id="main-content">
+			
+			
+			
 				<section class="wrapper">
 					<!--overview start-->
 					<div class="row">
@@ -54,9 +57,9 @@
 						</div>
 					</div>
 	
-					<div class="h-50">
+					<div class="row">
 	
-	 					Community1
+	 					Community1 
 	 					Community2
 	 					Community3
 	
@@ -64,6 +67,13 @@
 					</div>
 	
 				</section>
+				
+				
+				
+				
+				
+				
+				
 			</section>
 			<jsp:include page="/WEB-INF/views/include/footer.jsp" />
 

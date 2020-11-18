@@ -59,11 +59,93 @@
 	
 					<div class="row">
 			
-	 					Community1
-	 					Community2
-	 					Community3
-	
-	
+	 				<!-- 표시 -->
+
+					<div class="container">
+						<ul class="nav nav-tabs">
+							<li class="nav-item"><a class="nav-link " href="javascript:fun1()">전체</a></li>
+								<script>
+									function fun1(){
+										$.ajax({
+											url : "join1" , 
+											success : function(data) {
+												$("#fun1_result").html(data)
+											}
+										});
+									}
+								</script>
+							<li class="nav-item"><a class="nav-link" href="#">건강</a></li>
+							<li class="nav-item"><a class="nav-link" href="#">커리어</a></li>
+							<li class="nav-item"><a class="nav-link" href="#">머니</a></li>
+							<li class="nav-item"><a class="nav-link" href="#">후기</a></li>
+						</ul>
+						
+						<div id="fun1_result"></div>
+					</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+					<!-- 표시2 -->
+					
+					
+					
+					
+					
+					
+					
+					
+					
+					
+					
+					
+					
+					
+					
+					
+					
+					
+					
+					
+					
+					
+					
+					
+					
+					
+					
+					
+					
+					
+					
+					
+					
+					
 					</div>
 	
 				</section>

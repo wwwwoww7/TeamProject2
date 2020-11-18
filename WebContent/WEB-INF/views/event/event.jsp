@@ -30,6 +30,8 @@
 		<link href="<%=application.getContextPath()%>/resources/css/style.css" rel="stylesheet"> 
 		<link href="<%=application.getContextPath()%>/resources/css/style-responsive.css" rel="stylesheet"> 
 	</head>
+	
+	
 	<body>
 		<!-- container section start -->
   		<section id="container" class="">
@@ -45,7 +47,7 @@
 					<div class="row">
 						<div class="col-lg-12">
 							<h2 class="page-header">
-								<i class="fa fa-laptop"></i> 이벤트
+								<i class="fa fa-laptop"></i> EVENT
 							</h2>
 							<ol class="breadcrumb">
 								<li><i class="fa fa-home"></i><a href="#">Home</a></li>
@@ -53,20 +55,39 @@
 							</ol>
 						</div>
 					</div>
-	
-					<div class="container-fluid border">
-						<h4>전체 이벤트</h4>
-  						<img src="<%=application.getContextPath()%>/resources/img/ar/hh.jpg" class="grid_item first" alt="Paris" width="304" height="236">	
-  						<p>100% 전액 환불 이벤트</p>   
-					
-  					
-  						<img src="<%=application.getContextPath()%>/resources/img/ar/ee.jpg" class="grid_item two"  alt="Paris" width="304" height="236">
-  						<p>얼리버드 이벤트</p> 
-  					
-					
-						<img src="<%=application.getContextPath()%>/resources/img/ar/aa.jpg" class="grid_item third" width="304" height="236">
-						<p>할인</p> 
-  					</div>	
+					<h4>전체이벤트 </h4>
+					<div class="container-fluid">
+						<table class="table table-borderless">
+						<thead>
+						  <tbody>
+						<tr>
+	  						<td style="border-top: 0px;"><img src="<%=application.getContextPath()%>/resources/img/ar/hh.jpg" class=""  width="300" height="240"><br/>
+	  						<br/>20.11.16(월)~20.11.27(금)</br><a href="#">100%환급</a></td>	
+	  						<td style="border-top: 0px;"><img src="<%=application.getContextPath()%>/resources/img/ar/ee.jpg" class=""   width="300" height="240"><br/>
+	  						<br/>20.11.16(월)~20.11.27(금)</br><a href="#">101명에게 무료강의 제공</a></td>
+							<td style="border-top: 0px;"><img src="<%=application.getContextPath()%>/resources/img/ar/aa.jpg" class=""  width="300" height="240"><br/>
+							<br/>20.11.16(월)~20.11.27(금)</br><a href="#">얼리버드 환급</a></td>
+	  					</tr>
+	  					<tr >
+	  						<td style="border-top: 0px;"><img src="<%=application.getContextPath()%>/resources/img/ar/ee.jpg" class=""  width="300" height="240"><br/>
+	  						<br/>20.11.16(월)~20.11.27(금)</br><a href="#">100%환급</a></td>	
+	  						<td style="border-top: 0px;"><img src="<%=application.getContextPath()%>/resources/img/ar/kk.jpg" class=""   width="300" height="240"><br/>
+	  						<br/>20.11.16(월)~20.11.27(금)</br><a href="#">101명에게 무료강의 제공</a></td>
+							<td style="border-top: 0px;"><img src="<%=application.getContextPath()%>/resources/img/ar/ww.jpg" class="" width="300" height="240"><br/>
+							<br/>20.11.16(월)~20.11.27(금)</br><a href="#">얼리버드 환급</a></td>
+  						</tr>
+  						<tr>
+	  						<td style="border-top: 0px;"><img src="<%=application.getContextPath()%>/resources/img/ar/jj.jpg" class=""  width="300" height="240"><br/>
+	  						<br/>20.11.16(월)~20.11.27(금)</br><a href="#">100%환급</a></td>	
+	  						<td style="border-top: 0px;"><img src="<%=application.getContextPath()%>/resources/img/ar/hh.jpg" class=""  width="300" height="240"><br/>
+	  						<br/>20.11.16(월)~20.11.27(금)</br><a href="#">101명에게 무료강의 제공</a></td>
+							<td style="border-top: 0px;"><img src="<%=application.getContextPath()%>/resources/img/ar/aa.jpg" class="" width="300" height="240"><br/>
+							<br/>20.11.16(월)~20.11.27(금)</br><a href="#">얼리버드 환급</a></td>
+							
+	  					</tr>
+					</tbody>
+				</table>
+			</div>	
   					
 				</section>
 			</section>

@@ -22,14 +22,7 @@ public class HomeController {
 		return "home";
 	} 
 	
-	@RequestMapping("/login")   
-	public String login() {
-		logger.info("실행");
-		return "learn/login";
-	} 
-	
-	
-	
+
 	@GetMapping("/allCategory")
 	public String allCategory(Model model) {
 		model.addAttribute("category" ,"allCategory");

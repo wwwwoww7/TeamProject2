@@ -13,7 +13,7 @@ public class ClassController {
 	
 	
 	@GetMapping("/classdetail")
-	public String classDetail() {
+	public String classDetail(int classNo) {
 		return "/class/classdetail";
 	}
 }

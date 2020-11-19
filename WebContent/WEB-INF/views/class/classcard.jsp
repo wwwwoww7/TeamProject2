@@ -78,7 +78,7 @@
 			
 				<div class="carousel-item col-md-3 active">
 					<div class="card">
-						<a href="class/classdetail">
+						<a href="class/classdetail?classNo=1">
 							<img class="card-img-top img-fluid" src="<%=request.getContextPath()%>/resources/images/thumnails/video.png" alt="Card image cap">
 						</a>
 						<div class="card-body">

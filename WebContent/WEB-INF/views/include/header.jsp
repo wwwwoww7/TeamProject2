@@ -39,8 +39,8 @@
 					</a>
 					<ul class="dropdown-menu extended logout">
 						<div class="log-arrow-up"></div>
-						<li class="eborder-top"><a href="mypage/mypage_user"><i class="icon_profile"></i> MyPage(User)</a></li>
-						<li class="eborder-top"><a href="mypage/mypage_tutor"><i class="icon_profile"></i> MyPage(Tutor)</a></li>
+						<li class="eborder-top"><a href="<%=application.getContextPath()%>/mypage/mypage_user"><i class="icon_profile"></i> MyPage(User)</a></li>
+						<li class="eborder-top"><a href="<%=application.getContextPath()%>/mypage/mypage_tutor"><i class="icon_profile"></i> MyPage(Tutor)</a></li>
 						<li><a href="login"><i class="icon_key_alt"></i> LogOut</a></li>
 					</ul>
 				</li>

@@ -82,7 +82,7 @@
 							<img class="card-img-top img-fluid" src="<%=request.getContextPath()%>/resources/images/thumnails/video.png" alt="Card image cap">
 						</a>
 						<div class="card-body">
-							<a href="class/classdetail">
+							<a href="class/classdetail?classNo=1">
 								<h4 class="card-title">Card 1</h4>
 								<p class="card-text">
 									This is a longer card with supporting

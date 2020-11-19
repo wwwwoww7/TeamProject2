@@ -107,7 +107,8 @@
 
 			</script>
 			
-			<div id="classCardList" >
+			<div id="classCardList" class="row">
+				
 						
 						
 			</div>

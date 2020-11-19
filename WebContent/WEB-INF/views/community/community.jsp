@@ -29,7 +29,15 @@
 		<!-- Custom styles -->
 		<link href="<%=application.getContextPath()%>/resources/css/style.css" rel="stylesheet"> 
 		<link href="<%=application.getContextPath()%>/resources/css/style-responsive.css" rel="stylesheet"> 
+	
+		<script type="text/javascript">
+			$(function(){
+				fun1();
+			});
+		</script>
 	</head>
+	
+	
 	<body>
 		<!-- container section start -->
   		<section id="container" class="">
@@ -40,9 +48,6 @@
 
 			<!--main content start-->
 			<section id="main-content">
-			
-			
-			
 				<section class="wrapper">
 					<!--overview start-->
 					<div class="row">
@@ -51,22 +56,19 @@
 								<i class="fa fa-laptop"></i> Community
 							</h3>
 							<ol class="breadcrumb">
-								<li><i class="fa fa-home"></i><a href="#">Home</a></li>
+								<li><i class="fa fa-home"></i><a href="<%=application.getContextPath()%>">Home</a></li>
 								<li><i class="fa fa-laptop"></i>Community</li>
 							</ol>
 						</div>
 					</div>
-	
 					<div class="row">
-			
-	 				<!-- 표시 -->
 					<div class="container">
 						<ul class="nav nav-tabs">
 							<li class="nav-item"><a class="nav-link " href="javascript:fun1()">전체</a></li>
 								<script>
 									function fun1(){
 										$.ajax({
-											url : "community/boardall" , 
+											url : "community/boardAll" , 
 											success : function(data) {
 												$("#fun1_result").html(data);
 											}
@@ -77,7 +79,7 @@
 								<script>
 									function fun2(){
 										$.ajax({
-											url : "community/boardhealth" , 
+											url : "community/boardHealth" , 
 											success : function(data) {
 												$("#fun1_result").html(data);
 											}
@@ -88,7 +90,7 @@
 							<script>
 									function fun3(){
 										$.ajax({
-											url : "community/boardcareer" , 
+											url : "community/boardCareer" , 
 											success : function(data) {
 												$("#fun1_result").html(data);
 											}
@@ -99,7 +101,7 @@
 							<script>
 									function fun4(){
 										$.ajax({
-											url : "community/boardmoney" , 
+											url : "community/boardMoney" , 
 											success : function(data) {
 												$("#fun1_result").html(data);
 											}
@@ -110,15 +112,15 @@
 							<script>
 									function fun5(){
 										$.ajax({
-											url : "community/boardreview" , 
+											url : "community/boardReview" , 
 											success : function(data) {
 												$("#fun1_result").html(data);
 											}
 										});
 									}
 								</script>
+								
 						</ul>
-						
 						<div id="fun1_result"></div>
 					</div>
 

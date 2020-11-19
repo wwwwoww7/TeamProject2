@@ -1,24 +1,45 @@
 <%@ page contentType="text/html; charset=UTF-8"%>
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
+<%@ taglib prefix="fmt" uri="http://java.sun.com/jsp/jstl/fmt" %>
+
+
+
 <div class="container">
-	
-<p>${cate}</p>
-	<table class="table table-hover">
+	<p>${cate}</p>
+		<!-- 글쓰기 -->
 		<div class="sector"> 
-				<div align="right">
-					<a class="btn btn-outline-primary" href="javascript:boardList()">글쓰기</a>
-					<script type="text/javascript">
-						function boardList() {
-							$.ajax({
-								url:"boardList",
-								success:function(data) {
-									$("#board_result").html(data);
+			<div align="right">
+				<c:if test="${cate =='review'}">
+				<!-- selectbox -->
+					<div class="sector">
+						<div align="right" style="margin-top:7px; float:right;">
+							<select class="dropdown-toggle">
+							    <option>전체</option>
+							    <option>건강</option>
+							    <option>커리어</option>
+							    <option>머니</option>
+					 		 </select>
+						</div>
+					</div>		
+				</c:if>
+				<c:if test="${sessionMid==null}">
+					<a class="btn btn-outline-primary" style="border:1px solid primary; float:right; border-style:1px" href="javascript:boardList()">글쓰기</a>
+						<script type="text/javascript">
+							function boardList() {
+								$.ajax({
+										url:"boardList",
+										success:function(data) {
+										$("#board_result").html(data);
+										}
+									});
 								}
-							});
-						}
-					</script>
+						</script>
+					</c:if>
 				</div>
-			<div id="board_result"></div>
-		</div>	
+			</div>	
+	<div id="board_result"></div>
+	
+	<table class="table table-hover">
 		<thead>
 			<tr>
 				<th>번호</th>
@@ -33,7 +54,7 @@
 			<tr>
 				<td>전체공지</td>
 				<td>건강</td>
-				<td>야구방공지</td>
+				<td><a href="javascript:boardDetail()">야구방공지</a></td>
 				<td>2020.8.7</td>
 				<td>1254</td>
 				<td>354</td>
@@ -66,4 +87,14 @@
 			</tr>
 		</tbody>
 	</table>
+	<script type="text/javascript">
+			function boardDetail() {
+				$.ajax({
+					url:"<%=request.getContextPath()%>/community/boardDetail",
+					success:function(data) {
+						$("#fun1_result").html(data);
+					}
+				});
+			}
+	</script>
 </div>

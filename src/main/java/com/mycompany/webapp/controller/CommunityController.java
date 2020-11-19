@@ -16,35 +16,40 @@ import org.springframework.web.bind.annotation.RequestMapping;
 @RequestMapping("/community")
 public class CommunityController {
 	private static final Logger logger = LoggerFactory.getLogger(CommunityController.class);
-	
-	
-	@GetMapping("/boardall")
+
+	@GetMapping("/boardAll")
 	public String boardall(Model model) {
 		model.addAttribute("cate", "all");
 		return "community/community_list";
 	}
-	@GetMapping("/boardhealth")
+	@GetMapping("/boardHealth")
 	public String boardhealth(Model model) {
 		model.addAttribute("cate", "health");
 		return "community/community_list";
 	}
 	
-	@GetMapping("/boardcareer")
+	@GetMapping("/boardCareer")
 	public String boardcareer(Model model) {
 		model.addAttribute("cate", "career");
 		return "community/community_list";
 	}
 	
-	@GetMapping("/boardmoney")
+	@GetMapping("/boardMoney")
 	public String boardmoeny(Model model) {
 		model.addAttribute("cate", "money");
 		return "community/community_list";
 	}
 	
-	@GetMapping("/boardreview")
+	@GetMapping("/boardReview")
 	public String boardreview(Model model) {
 		model.addAttribute("cate", "review");
-		return "community/community_review";
+		return "community/community_list";
+	}
+	
+	@GetMapping("/boardDetail")
+	public String boarddetail() {
+		
+		return "community/community_detail";
 	}
 
 }

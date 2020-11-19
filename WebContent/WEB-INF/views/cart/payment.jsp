@@ -50,65 +50,73 @@
 			position: relative;
 			margin:0px;
 		}
-		
-		
-		.cartlist {
-			
+		#blah {
+			border : 1px solid black; 
+			height : auto;
+			margin : 10px;
+			color: #000;
+		}
+		#blah2 {
+			margin : 10px;
+		}
+		#blah2 ol{
+			color: #690700;
+			font-weight:bold;
+			margin-top:10px;
+		}
+		.pay_table {
+			border-top:2px solid #945b00;
 			margin: auto;
 			position: relative;
 			
 		}
-		.cartlist thead th{
+		
+		.pay_table tr{
 			text-align:center;
-			height:40px;
-			border-top:2px solid #945b00;
-			border-bottom:1px solid #CCC;  
+			height:30px;
+			/* border : 1px solid #000;
+			/* border-top:2px solid #945b00; */
+			/* border-bottom:1px solid #CCC;  */ 
 			font-weight: bold;
 			font-size: 15px;
 		}
-		.cartlist tbody td{
+		.pay_table td{
 			text-align:center;
 			padding: 20px 0 ;
-			margin : 10px;
-			border-bottom:1px solid	 #CCC; 
+			margin : 10px; 
 			height:20px;
 			font-size: 14px 
 		}
-		.bak_item {
-			height: 170px;
-			margin:30px;
-		}
-		.cartlist tfoot td {
-			padding: 20px 0 ;
-			margin : 10px;
-			border-top:1px solid #CCC; 
-			border-bottom:2px solid #945b00;
-			height:20px;
-			font-size: 14px; 
+		.pay_table td.name{
+			text-align:center;
+			width:100px;
+			height:30px;
+			border-right:1px solid #CCC;  
+			border-bottom:1px solid #CCC; 
 			font-weight: bold;
-			font-style: #000;
-		
+			font-size: 15px;
+			color: #690700;
 		}
-		.cartlist #id{
-			text-align: center;
+		.pay_table td.cont{
+			border-bottom:1px solid	#CCC;
+			text-align:center;
+			width:200px;
+			height:30px;
+			font-size: 15px;
 		}
-		#cnum{
-			text-align:left;
-			margin-left: 15px;
+		.pay_table tfoot{
+			width:300px;
+			height:30px;
+			font-weight: bold;
+			font-size: 15px;
 		}
-		#csum{
-			text-align:right;
-			margin-right: 15px;
+		.pay_table tr.warr{ 
+			font-size: 5px;
+			border-top:2px solid #945b00;
+			color:red; 
+			margin:10px;
 		}
-		#btn{
-			margin:2px;
-			float: right;
-		}
-		#go{
-			border-bottom:none;
-		}
-		
-</style>
+	</style>
 	<script type="text/javascript">
 		$(function(){
 			$('#sidebar > ul').hide();
@@ -121,9 +129,6 @@
             $('#sidebar > ul').hide();
             $("#container").addClass("sidebar-closed");
 		});
-		
-		
-	
 	</script>
 	<body>
 		<!-- container section start -->
@@ -158,71 +163,90 @@
 							<h3>주문상품확인</h3>
 						
 						<div id="sm_title">
-							<span style="font-weight: bold">01 장바구니 > </span><span id="2">02 주문서작성/결제 > </span><span>03 주문완료</span>
+							<span>01 장바구니 > <span>02 주문서작성/결제 > </span style="font-weight: bold" >03 주문완료</span>
 						</div>
 						</div>
 					</div>	
 					<br/>
 					<br/>
 					<div class="col-lg-12">
-						<table class="cartlist">
+						<div id="blah">
+							<div id="blah2">
+								결제를 하기 위하여 아래 정보를 확인 하여 결제를 완료하여 주십시오.
+									<ol>
+										<li>결제금액이 맞는지 확인 하여 주십시오.</li>
+										<li>본인 아이디가 맞는지 확인 하여 주십시오.</li>
+										<li>체크 확인완료 시 바로결제 버튼을 눌러 결제를 진행하여 주십시오.</li>
+									</ol>
+							</div>
+						</div>
+						<table class="pay_table">
 							<thead>
 								<tr>
-									<th width="50"  class="notice_title">체크</th>
-									<th width="450" class="notice_title">상품/옵션 정보</th>
-									<th width="160" class="notice">수량</th>
-									<th width="200" class="notice">상품금액</th>
-									<th width="150" class="notice">합계금액</th>
+									<td class="name" >상점명</td>
+									<td class="cont">BAN숙 에듀(주)</td>
+								</tr>
+								<tr>
+									<td class="name">결제금액</td>
+									<td class="cont">결제 총액 끌어왕</td>
+								</tr>
+								<tr>
+									<td class="name">결제자 ID</td>
+									<td class="cont">결제할 사람 id 끌어오기</td>
+								</tr>
+								<tr>
+									<td class="name">휴대전화</td>
+									<td class="cont">휴대전화번호 끌어왑</td>
+								</tr>
+								<tr class="warr">
+									<td colspan="2">*이용동의에 체크가 완료되지 않으면 결제진행의 어려움이 있습니다.</td>
 								</tr>
 							</thead>
 							<tbody>
 						        <tr>
-						          <td width="50">
-						          	<input type="checkbox" name="" value="">
-						          </td>
-						          <td width="450">
-						          	<div class="bak_item">
-										<div class="pro_img"><img width=70% src="<%=application.getContextPath()%>/resources/images/photo1.jpg" alt="propic" title="propic" ></div>
-										
-									</div>
-						          </td>
-						          <td width="160">수량</td>
-						          <td width="200">상품금액</td>
-						          <td width="150">합계금액</td>
+						   			<td colspan="2">
+							   			<div class="checkbox_group">
+							   				<input type="checkbox" class="chk" id="checkAll" />전체동의
+							   				<input type="checkbox" name="chk" class="chk" id="chk"/>이용약관동의
+							   				<input type="checkbox" name="chk" class="chk" id="chk"/>개인정보 처리방침 동의
+							   			</div>
+						 	  		<script type="text/javascript">
+							 	  		
+							 	  		// 체크박스 전체 선택
+									   			$("#checkAll").click(function () {
+									   				if($("#checkAll").is(":checked")){
+									   					$(".chk").prop("checked", true);
+									   				}else{
+									   					$(".chk").prop("checked", false);
+									   				}
+									   			});
+									   			 
+									   		 // 체크박스 개별 선택
+									   			$(".chk").click(function(){
+													if($("input[name='chk']:checked").length==2){
+														$("#checkAll").prop("checked",true);
+													}else{
+														$("#checkAll").prop("checked",false);
+													}
+												}); 
+							 	  		
+						   			</script>
+						   			</td>
 						        </tr>
 					   		</tbody>
 					   		<tfoot>
 								<tr>
-									<td colspan="5" style="text-align: center;">
-										<a class="btn btn-outline-primary btn-sm" href="#">처음</a> 
-										<a class="btn btn-outline-info btn-sm" href="#">이전</a> 
-											<c:forEach var="i" begin="1" end="5">
-												<a class="btn btn-outline-success btn-sm" href="#">${i}</a>
-											</c:forEach> 
-										<a class="btn btn-outline-info btn-sm" href="#">다음</a> 
-										<a class="btn btn-outline-primary btn-sm" href="#">맨끝</a></td>
-								</tr>
-								<tr>
-					   				<td colspan="2" id="cnum">선택한 상품의 개수</td>
-					   				<td colspan="3" id="csum">최종 결제금액</td>
-					   			</tr>
-					   			<tr id="btn_next">
-					   				<td colspan="5">
-										<a class="btn btn-info" href="<%=application.getContextPath()%>/cart/payment">결제하기</a>	
+									<td colspan="2">
+										<a class="btn btn-info btn-sm" href="<%=application.getContextPath()%>/cart/pay_complate">결제하기</a>	
 					   				</td>
 					   			</tr>
 					   		</tfoot>
-					   			
-					   			
 						</table>
-						<div id="payment_result" style="margin-top:30px"></div>
 					</div>
-					
 				</div>
-				</section>
-			
 			</section>
-			<jsp:include page="/WEB-INF/views/include/footer.jsp" />
+		</section>
+		<jsp:include page="/WEB-INF/views/include/footer.jsp" />
 
 
 

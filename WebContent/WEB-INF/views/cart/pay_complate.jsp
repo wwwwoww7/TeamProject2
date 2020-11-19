@@ -50,81 +50,48 @@
 			position: relative;
 			margin:0px;
 		}
-		
-		
-		.cartlist {
-			
+		.complate_table {
 			margin: auto;
 			position: relative;
+		}
+		.complate_table tr{
+			border:1px solid #fff;
+			text-align:center;
 			
 		}
-		.cartlist thead th{
-			text-align:center;
-			height:40px;
-			border-top:2px solid #945b00;
-			border-bottom:1px solid #CCC;  
+		.complate_table td.ico{
 			font-weight: bold;
-			font-size: 15px;
+			font-size: 35px;
 		}
-		.cartlist tbody td{
-			text-align:center;
-			padding: 20px 0 ;
-			margin : 10px;
-			border-bottom:1px solid	 #CCC; 
-			height:20px;
-			font-size: 14px 
-		}
-		.bak_item {
-			height: 170px;
-			margin:30px;
-		}
-		.cartlist tfoot td {
-			padding: 20px 0 ;
-			margin : 10px;
-			border-top:1px solid #CCC; 
-			border-bottom:2px solid #945b00;
-			height:20px;
-			font-size: 14px; 
+		.complate_table tbody{
+			font-size: 20px;
 			font-weight: bold;
-			font-style: #000;
-		
 		}
-		.cartlist #id{
-			text-align: center;
+		.complate_table td.ico5{
+			height:60px;
+			font-weight: bold;
+			font-size: 35px;
 		}
-		#cnum{
-			text-align:left;
-			margin-left: 15px;
+		.complate_table tfoot td{
+			height:100px;
+			margin:20px;
 		}
-		#csum{
-			text-align:right;
-			margin-right: 15px;
-		}
-		#btn{
-			margin:2px;
-			float: right;
-		}
-		#go{
-			border-bottom:none;
-		}
-		
-</style>
+	</style>
 	<script type="text/javascript">
-		$(function(){
-			$('#sidebar > ul').hide();
-            $('#main-content').css({
-                'margin-left': '0px'
-            });
-            $('#sidebar').css({
-                'margin-left': '-180px'
-            });
-            $('#sidebar > ul').hide();
-            $("#container").addClass("sidebar-closed");
-		});
-		
-		
-	
+			$(function(){
+				$('#sidebar > ul').hide();
+	            $('#main-content').css({
+	                'margin-left': '0px'
+	            });
+	            $('#sidebar').css({
+	                'margin-left': '-180px'
+	            });
+	            $('#sidebar > ul').hide();
+	            $("#container").addClass("sidebar-closed");
+			});
+			
 	</script>
+	
 	<body>
 		<!-- container section start -->
   		<section id="container" class="">
@@ -155,67 +122,54 @@
 				<div class="h-50">
 					<div class="col-lg-12">
 						<div id="basket">
-							<h3>주문상품확인</h3>
+							<h3>주문완료</h3>
 						
 						<div id="sm_title">
-							<span style="font-weight: bold">01 장바구니 > </span><span id="2">02 주문서작성/결제 > </span><span>03 주문완료</span>
+							<span>01 장바구니 > </span><span id="2">02 주문서작성/결제 > </span><span style="color=#000; font-weight: bold">03 주문완료</span>
 						</div>
 						</div>
 					</div>	
 					<br/>
 					<br/>
 					<div class="col-lg-12">
-						<table class="cartlist">
+						<table class="complate_table">
 							<thead>
 								<tr>
-									<th width="50"  class="notice_title">체크</th>
-									<th width="450" class="notice_title">상품/옵션 정보</th>
-									<th width="160" class="notice">수량</th>
-									<th width="200" class="notice">상품금액</th>
-									<th width="150" class="notice">합계금액</th>
+									<td class="ico">
+										<div style="font-size: 250px; color:#ccc">
+											<i class="fa fa-gift fa-10x"></i>
+										</div>
+										<p style="color:#470000">주문이 완료되었습니다!</p>
+									</td>
 								</tr>
 							</thead>
 							<tbody>
 						        <tr>
-						          <td width="50">
-						          	<input type="checkbox" name="" value="">
-						          </td>
-						          <td width="450">
-						          	<div class="bak_item">
-										<div class="pro_img"><img width=70% src="<%=application.getContextPath()%>/resources/images/photo1.jpg" alt="propic" title="propic" ></div>
-										
-									</div>
-						          </td>
-						          <td width="160">수량</td>
-						          <td width="200">상품금액</td>
-						          <td width="150">합계금액</td>
+						         	<td class="ico2">
+						         		고객님! <span>BAN</span><span>숙 에듀</span>를 이용해 주셔서 감사합니다.
+						         	</td>
 						        </tr>
+						        <tr>
+						         	<td class="ico3">
+						         		고객님, <span>주문이 완료</span> 되었습니다.
+						         	</td>
+						        </tr>
+						        <tr>
+						         	<td class="ico4">
+						         		주문내역 확인은 마이페이지에서 조회 하실 수 있습니다. 
+						         	</td>
+						        </tr>
+						        
 					   		</tbody>
 					   		<tfoot>
-								<tr>
-									<td colspan="5" style="text-align: center;">
-										<a class="btn btn-outline-primary btn-sm" href="#">처음</a> 
-										<a class="btn btn-outline-info btn-sm" href="#">이전</a> 
-											<c:forEach var="i" begin="1" end="5">
-												<a class="btn btn-outline-success btn-sm" href="#">${i}</a>
-											</c:forEach> 
-										<a class="btn btn-outline-info btn-sm" href="#">다음</a> 
-										<a class="btn btn-outline-primary btn-sm" href="#">맨끝</a></td>
-								</tr>
-								<tr>
-					   				<td colspan="2" id="cnum">선택한 상품의 개수</td>
-					   				<td colspan="3" id="csum">최종 결제금액</td>
-					   			</tr>
-					   			<tr id="btn_next">
-					   				<td colspan="5">
-										<a class="btn btn-info" href="<%=application.getContextPath()%>/cart/payment">결제하기</a>	
-					   				</td>
+					   			<tr>
+					   				<td class="btnf"><a class="btn btn-info" href="#">홈으로 가기</a></td>
 					   			</tr>
 					   		</tfoot>
 					   			
 					   			
 						</table>
-						<div id="payment_result" style="margin-top:30px"></div>
+						
 					</div>
 					
 				</div>

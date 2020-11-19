@@ -7,17 +7,25 @@ import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 
-
-/**
- * 2020. 11. 17 
- *
- */
 @Controller
 @RequestMapping("/cart")
 public class CartController {
 	private static final Logger logger = LoggerFactory.getLogger(CartController.class);
 	
-	/*@RequestMapping("/test")*/
+	@RequestMapping("/cart")
+	public String cart() {
+		return "cart/cart";
+	}
+
 	
+	@GetMapping("/payment")
+	public String payment() {
+		return "cart/payment";
+	}
+	
+	@GetMapping("/pay_complate")
+	public String pay_complate() {
+		return "cart/pay_complate";
+	}
 	
 }

@@ -1,5 +1,5 @@
 <%@ page contentType="text/html; charset=UTF-8"%>
-
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 
 
 <style>
@@ -75,117 +75,34 @@
 	<div id="myCarousel" class="carousel slide" data-ride="carousel">
 		<div class="carousel-inner row w-100 mx-auto">
 			
-			
+			<c:forEach var="i" begin="1" end="7">
 				<div class="carousel-item col-md-3 active">
 					<div class="card">
-						<a href="class/classdetail?classNo=1">
+						<a href="class/classdetail?classNo=${i}">
 							<img class="card-img-top img-fluid" src="<%=request.getContextPath()%>/resources/images/thumnails/video.png" alt="Card image cap">
 						</a>
 						<div class="card-body">
-							<a href="class/classdetail?classNo=1">
-								<h4 class="card-title">Card 1</h4>
+							<a href="class/classdetail?classNo=${i}">
+								<h4 class="card-title">Card ${i}</h4>
 								<p class="card-text">
 									This is a longer card with supporting
 									text below as a natural lead-in to additional content. This
 									content is a little bit longer.
 								</p>
 								<p class="card-text">
-									<small class="text-muted">Last updated 3 mins ago</small>
+									<small class="text-muted">Last updated ${i+3} mins ago</small>
 								</p>
 							</a>
 						</div>
 					</div>
 				</div>
-			
-			
-			<div class="carousel-item col-md-3">
-				<div class="card">
-					<img class="card-img-top img-fluid" src="<%=request.getContextPath()%>/resources/images/thumnails/video02.png" alt="Card image cap">
-					<div class="card-body">
-						<h4 class="card-title">Card 2</h4>
-						<p class="card-text">
-							This is a longer card with supporting
-							text below as a natural lead-in to additional content. This
-							content is a little bit longer.</p>
-						<p class="card-text">
-							<small class="text-muted">Last updated 3 mins ago</small>
-						</p>
-					</div>
-				</div>
-			</div>
-			<div class="carousel-item col-md-3">
-				<div class="card">
-					<img class="card-img-top img-fluid" src="<%=request.getContextPath()%>/resources/images/thumnails/video03.png" alt="Card image cap">
-					<div class="card-body">
-						<h4 class="card-title">Card 3</h4>
-						<p class="card-text">
-							This is a longer card with supporting
-							text below as a natural lead-in to additional content. This
-							content is a little bit longer.</p>
-						<p class="card-text">
-							<small class="text-muted">Last updated 3 mins ago</small>
-						</p>
-					</div>
-				</div>
-			</div>
-			<div class="carousel-item col-md-3">
-				<div class="card">
-					<img class="card-img-top img-fluid" src="<%=request.getContextPath()%>/resources/images/thumnails/video04.png" alt="Card image cap">
-					<div class="card-body">
-						<h4 class="card-title">Card 4</h4>
-						<p class="card-text">
-							This is a longer card with supporting
-							text below as a natural lead-in to additional content. This
-							content is a little bit longer.</p>
-						<p class="card-text">
-							<small class="text-muted">Last updated 3 mins ago</small>
-						</p>
-					</div>
-				</div>
-			</div>
-			<div class="carousel-item col-md-3">
-				<div class="card">
-					<img class="card-img-top img-fluid" src="<%=request.getContextPath()%>/resources/images/thumnails/video.png" alt="Card image cap">
-					<div class="card-body">
-						<h4 class="card-title">Card 5</h4>
-						<p class="card-text">
-							This is a longer card with supporting
-							text below as a natural lead-in to additional content. This
-							content is a little bit longer.</p>
-						<p class="card-text">
-							<small class="text-muted">Last updated 3 mins ago</small>
-						</p>
-					</div>
-				</div>
-			</div>
-			<div class="carousel-item col-md-3">
-				<div class="card">
-					<img class="card-img-top img-fluid" src="<%=request.getContextPath()%>/resources/images/thumnails/video02.png" alt="Card image cap">
-					<div class="card-body">
-						<h4 class="card-title">Card 6</h4>
-						<p class="card-text">This is a longer card with supporting
-							text below as a natural lead-in to additional content. This
-							content is a little bit longer.</p>
-						<p class="card-text">
-							<small class="text-muted">Last updated 3 mins ago</small>
-						</p>
-					</div>
-				</div>
-			</div>
-			<div class="carousel-item col-md-3">
-				<div class="card">
-					<img class="card-img-top img-fluid" src="<%=request.getContextPath()%>/resources/images/thumnails/video03.png" alt="Card image cap">
-					<div class="card-body">
-						<h4 class="card-title">Card 7</h4>
-						<p class="card-text">This is a longer card with supporting
-							text below as a natural lead-in to additional content. This
-							content is a little bit longer.</p>
-						<p class="card-text">
-							<small class="text-muted">Last updated 3 mins ago</small>
-						</p>
-					</div>
-				</div>
-			</div>
+			</c:forEach>
+
+
+
+
+
+
 		</div>
 		<a class="carousel-control-prev" href="#myCarousel" role="button"
 			data-slide="prev"> <span class="carousel-control-prev-icon"

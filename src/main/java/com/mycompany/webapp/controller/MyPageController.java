@@ -38,6 +38,19 @@ public class MyPageController {
 		return "mypage/userpicklist";
 	}
 	
+	//수강생 강의문의 목록 보기
+	@GetMapping("/myQa")
+	public String myQa() {
+		
+		return "mypage/myQa";
+	}
+	
+	//사용자의 강의문의 상세내용보기!!
+	@GetMapping("/myqadetail")
+	public String myqadetail() {
+		
+		return "mypage/myqadetail";
+	}
 	
 	
 	//*----------- 강사 페이지------------------- *//		
@@ -69,11 +82,18 @@ public class MyPageController {
 		
 		return "mypage/tutorclassqa";
 	}
-	//강사의 강의문의 목록
+	//강사의 강의문의 상세내용보기
 	@GetMapping("/qaDetail")
 	public String qaDetail() {
 		
 		return "mypage/qadetail";
+	}
+	
+	//강사의 강의공지사항 글쓰기
+	@PostMapping("/noticeEdit")
+	public String noticeEdit() {
+		
+		return "mypage/noticeEdit";
 	}
 	
 	//*--------------회원정보수정---------------- *//

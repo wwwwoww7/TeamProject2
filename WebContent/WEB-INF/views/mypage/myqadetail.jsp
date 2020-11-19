@@ -24,28 +24,28 @@
 			<textarea style="width:100%"readonly>내용</textarea>
 		</div>
 		
-		<a class="btn" href="javascript:tutorClassQA()">답변</a>
+		<a class="btn" href="javascript:myQa()">답변</a>
 		<script type="text/javascript">
-			function tutorClassQA(){
+			function myQa(){
 					$.ajax({
-						url:"tutorClassQA",
-						type: "POST",
+						url:"myQa",
 						success: function(data){
-								$("#tutorClassQA").html(data);
+								$("#myqa").html(data);
 							}
+	
 						});
 					} 
 		</script>
 		
-		<a class="btn" href="javascript:tutorClassQA()">확인</a>
+		<a class="btn" href="javascript:myQa()">확인</a>
 		<script type="text/javascript">
-			function tutorClassQA(){
+			function myQa(){
 					$.ajax({
-						url:"tutorClassQA",
-						type: "POST",
+						url:"myQa",
 						success: function(data){
-								$("#tutorClassQA").html(data);
+								$("#myqa").html(data);
 							}
+	
 						});
 					} 
 		</script>			

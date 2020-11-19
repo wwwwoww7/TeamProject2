@@ -48,6 +48,7 @@
 		  		 	<!---------------------- 사용자가 수강생일때---------------------------------->
                    	<li class="nav-item"><a class="nav-link js-scroll-trigger" href="#classlist">수강목록</a></li>
                    	<li class="nav-item"><a class="nav-link js-scroll-trigger" href="#picklist">찜목록</a></li>
+                   	<li class="nav-item"><a class="nav-link js-scroll-trigger" href="#myQa">나의 문의</a></li>
                    
                   	<!---------------------- 사용자가 강사일때-----------------------------------> 
                     <li class="nav-item"><a class="nav-link js-scroll-trigger" href="#tutorlist">나의강의</a></li>
@@ -119,7 +120,33 @@
                    <div id="mypagePickList" ></div>
                    
                </div>
-           </section>    
+           </section>  
+           
+           <!-- 나의 문의-->
+           <section class="resume-section" id="myQa">
+               <div class="resume-section-content">
+                   <h1 class="mb-0 text-primary">나의문의</h1>
+                   <br/>
+                   <script type="text/javascript">
+                   
+	                   function myQa(){
+	   					$.ajax({
+	   						url:"myQa",
+	   						success: function(data){
+	   								$("#myqa").html(data);
+	   							}
+	
+	   						});
+	   					}
+	                   $(function() {
+	                	   myQa();
+						});
+
+                   </script> 
+                   <div id="myqa"></div>
+                   
+               </div>
+           </section>      
            
           <!---------------------- 사용자가 강사일때---------------------------------->  
             <!-- 나의 강의-->
@@ -206,13 +233,13 @@
 	                   jQuery(document).ready(function(){
 	                	   tutorClassQA();
 	                   }); 
+
                    </script> 
                    <div id="tutorClassQA"></div>
 	            </div>
 	        </section>
            <hr class="m-0" />
          </div>
-		<jsp:include page="/WEB-INF/views/include/footer.jsp" />
 		
 		<!-- Bootstrap core JS-->
         <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.bundle.min.js"></script>

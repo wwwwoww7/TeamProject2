@@ -61,11 +61,15 @@
                    <br/>
                    <div id="userEdit" > 회원정보수정 할 수 있음</div>
                    
+                   <a class="btn" href="mypage_user">수정완료</a>
+                   
+                   <a class="btn" href="mypage_user">취소</a>
+                   
+                   
                </div>
            </section>
            <hr class="m-0" />
          </div>
-		<jsp:include page="/WEB-INF/views/include/footer.jsp" />
 		
 		<!-- Bootstrap core JS-->
         <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.bundle.min.js"></script>

@@ -15,7 +15,9 @@
         <link href="https://fonts.googleapis.com/css?family=Muli:400,400i,800,800i" rel="stylesheet" type="text/css" />
         <!-- Core theme CSS (includes Bootstrap)-->
         <link href="<%=application.getContextPath()%>/resources/css/mypagestyles.css" rel="stylesheet" />
-       
+        
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+        
     </head>
     <body id="page-top">
 
@@ -49,7 +51,26 @@
                     	   수강목록
                    </h1>
                    <br/>
-                   <p class="lead mb-5"> 여기에 수강 목록 영상들 옴</p>
+
+                    <script type="text/javascript">
+                   
+	                   function userClasslist(){
+	   					$.ajax({
+	   						url:"userclasslist",
+	   						success: function(data){
+	   								$("#mypageUserList").html(data);
+	   							}
+	
+	   						});
+	   					
+	   					}
+
+	                   jQuery(document).ready(function(){
+	                	   userClasslist();
+	                   }); 
+                   </script> 
+                   <div id="mypageUserList" ></div>
+                   
                </div>
            </section>
            <hr class="m-0" />
@@ -60,24 +81,37 @@
                      	  찜목록
                    </h1>
                    <br/>
+                   <script type="text/javascript">
                    
-                   <p id = "pick_result" class="lead mb-5"> 여기에 "찜목록" 영상들 옴</p>
+	                   function userPicklist(){
+	   					$.ajax({
+	   						url:"userpicklist",
+	   						success: function(data){
+	   								$("#mypagePickList").html(data);
+	   							}
+	
+	   						});
+	   					
+	   					}
+
+	                   jQuery(document).ready(function(){
+	                	   userPicklist();
+	                   }); 
+                   </script> 
+                   <div id="mypagePickList" ></div>
                    
                </div>
-           </section>
+           </section>    
            <hr class="m-0" />
          </div>
 		<jsp:include page="/WEB-INF/views/include/footer.jsp" />
-
-        
-        <!-- Bootstrap core JS-->
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+		
+		<!-- Bootstrap core JS-->
         <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.bundle.min.js"></script>
         <!-- Third party plugin JS-->
         <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-easing/1.4.1/jquery.easing.min.js"></script>
         <!-- Core theme JS-->
         <script src="<%=application.getContextPath()%>/resources/js/scripts_mypage.js"></script>
-        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
- 		<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+     
     </body>
 </html>

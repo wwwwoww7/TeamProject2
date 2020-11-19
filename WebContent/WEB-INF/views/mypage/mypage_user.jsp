@@ -17,19 +17,19 @@
         <link href="https://fonts.googleapis.com/css?family=Muli:400,400i,800,800i" rel="stylesheet" type="text/css" />
         <!-- Core theme CSS (includes Bootstrap)-->
         <link href="<%=application.getContextPath()%>/resources/css/mypagestyles.css" rel="stylesheet" />
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+   		<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
         
     </head>
     <body id="page-top">
 
 	 <!-- Navigation-->
        <nav class="navbar navbar-expand-lg navbar-dark bg-primary fixed-top" id="sideNav">
-           <a class="navbar-brand js-scroll-trigger" href="#page-top">
+           <a class="navbar-brand js-scroll-trigger" href="userEdit">
                <span class="d-block d-lg-none">BAN숙</span>
                <span class="d-none d-lg-block">
-	               <a class="nav-link js-scroll-trigger" href="javascript:userEdit()">
+	             <!--   <a class="nav-link js-scroll-trigger" href="javascript:userEdit()"> -->
 	               		<img class="img-fluid img-profile rounded-circle mx-auto mb-2" src="<%=application.getContextPath()%>/resources/images/loppy.png" />
-	               </a>
+	              <!--  </a> -->
                </span>
            </a>	
            <script type="text/javascript">
@@ -60,37 +60,7 @@
        
        <!-- Page Content-->
        <div class="container-fluid p-0">
-       
-       		<!-- 회원정보수정-->
-       		<!-- 회원정보수정은 누르면 뜨게 할거야~~-->
-           <section class="resume-section" id="useredit">
-               <div class="resume-section-content">
-                   <h1 class="mb-0 text-primary">
-                    	  회원정보수정
-                   </h1>
-                   <br/>
-
-                    <script type="text/javascript">
-                   
-	                   function userEdit(){
-	   					$.ajax({
-	   						url:"userEdit",
-	   						success: function(data){
-	   								$("#userEdit").html(data);
-	   							}
-	
-	   						});
-	   					
-	   					}
-
-	                   jQuery(document).ready(function(){
-	                	   userEdit();
-	                   }); 
-                   </script> 
-                   <div id="userEdit" ></div>
-                   
-               </div>
-           </section>
+     
        <!---------------------- 사용자가 수강생일때---------------------------------->
            <!-- 수강목록-->
            <section class="resume-section" id="classlist">
@@ -237,7 +207,7 @@
 	                	   tutorClassQA();
 	                   }); 
                    </script> 
-                   <div id="tutorClassQA" ></div>
+                   <div id="tutorClassQA"></div>
 	            </div>
 	        </section>
            <hr class="m-0" />

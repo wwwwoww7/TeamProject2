@@ -1,6 +1,5 @@
-<%@ page contentType="text/html; charset=UTF-8"%>
-<%@ taglib prefix="form" uri="http://www.springframework.org/tags/form" %>
-<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
+<%@ page contentType="text/html;charset=UTF-8"%>
+
 <html>	
 	<head>
 		<meta charset="utf-8">
@@ -29,39 +28,26 @@
 	
 		<div class="container">
 		<jsp:include page="/WEB-INF/views/include/header.jsp"/>
-			<div>
-				<form class="login-form" action="join">
-					<div class="login-wrap">
-						<p class="login-img">
-							<i class="icon-pen"></i>
-						</p>
+			<div class="wrapper">
+				<h3 class="centered">가입 당시 계정의 이메일을 입력하세요.</h3> <br/>
+				<h5>비밀번호 재설정 이메일을 전송해드리겠습니다.</h5>
+				<form class="login-form" action="findpw" method="post">
+					
+					
+					<div class="post-wrap aside">
+
 						<div class="input-group">
-							<span class="input-group-addon"><i class="icon_profile"></i>이름</span>
-							<input type="text" class="form-control" placeholder="김미영" autofocus>
-						</div>
-						<div class="input-group">
-							<span class="input-group-addon"><i class="icon-envelope-l"></i>이메일</span>
+					
+							<span class="input-group-addon"><i class="icon-envelope-l"></i>계정 이메일 입력</span>
 							<input type="text" class="form-control" placeholder="xxx@xxxx.xxx">
 						</div>
-						<div class="input-group">
-							<span class="input-group-addon"><i class="icon_key_alt"></i>비밀번호</span>
-							<input type="password" class="form-control" placeholder="비밀번호">
-						</div>
-						
-						<%-- <form method="post" action="typeuser">
-							사용자 유형: 
-						</form>
-						 --%>
-						<select id="mtypeuser" name="mtypeuser" style="width:100%">
-							<option>----가입 유형을 입력하세요----</option>
-							<option value="수강생">수강생</option>
-							<option value="강사">강사</option>						
-						</select>
 						
 					</div>
 					
-					<button class="btn btn-info btn-lg btn-block " type="submit" autofocus >Sign up</button>
+					<button class="btn btn-dark btn-lg btn-block " type="submit" autofocus >비밀번호 재설정 메일 전송하기</button>
 				</form>
+				
+				
 				<div class="text-right">
 					<div class="credits">
 						copyright 2020 TEAM1 All right reserved. &nbsp;

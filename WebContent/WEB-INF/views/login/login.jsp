@@ -1,5 +1,7 @@
+<%@ page contentType="text/html;charset=UTF-8"%>
+
 <!DOCTYPE html>
-<html lang="en">
+<html>
 
 	<head>
 		<meta charset="utf-8">
@@ -27,30 +29,35 @@
 	<body class="login-img3-body">
 
 		<div class="container">
-	
-			<form class="login-form" action="login/">
+		
+			<jsp:include page="/WEB-INF/views/include/header.jsp"/>
+		
+			<form class="login-form" action="login">
 				<div class="login-wrap">
 					<p class="login-img">
 						<i class="icon_lock_alt"></i>
 					</p>
 					<div class="input-group">
-						<span class="input-group-addon"><i class="icon_profile"></i></span>
+						<span class="input-group-addon"><i class="icon_profile"></i>이름</span>
 						<input type="text" class="form-control" placeholder="Username"
 							autofocus>
 					</div>
 					<div class="input-group">
-						<span class="input-group-addon"><i class="icon_key_alt"></i></span>
+						<span class="input-group-addon"><i class="icon_key_alt"></i>비밀번호</span>
 						<input type="password" class="form-control" placeholder="Password">
 					</div>
 					<label class="checkbox"> 
 						<input type="checkbox" value="remember-me"> 
 							Remember me 
+						
 						<span class="pull-right">
-							<a href="#"> Forgot Password?</a>
+							<a href="<%=request.getContextPath()%>/login/findpw"> Forgot Password?</a>
 						</span>
+						
 					</label>
-					<button class="btn btn-primary btn-lg btn-block" type="submit">Signin</button>
-					<button class="btn btn-info btn-lg btn-block" type="submit" onclick="login/join">Signup</button>
+					<button class="btn btn-primary btn-lg btn-block" type="submit">Sign in</button>
+					
+					<a class="btn btn-info btn-lg btn-block"  href="<%=request.getContextPath()%>/login/join">Join</a>
 				</div>
 			</form>
 			<div class="text-right">

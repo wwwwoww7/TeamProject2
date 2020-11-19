@@ -21,14 +21,14 @@
 				</a>
 			</li>
 
-<%-- 			<c:if test="${sessionMid == null}"> --%>
-<!-- 				<li class="dropdown"> -->
-<!-- 					<a href="login"  class="dropdown-toggle" >  -->
-<!-- 						<span class="text-white">Login</span> -->
-<!-- 					</a> -->
-<!-- 				</li> -->
-<%-- 			</c:if> --%>
-<%-- 			<c:if test="${sessionMid != null}"> --%>
+			<c:if test="${sessionMid == null}">
+				<li class="dropdown"> 
+					<a href="<%=application.getContextPath()%>/login/login"  class="dropdown-toggle" > 
+ 						<span class="text-white">Login</span> 
+ 					</a>
+ 				</li>
+			</c:if>
+			<c:if test="${sessionMid != null}">
 				<li class="dropdown">
 					<a data-toggle="dropdown" class="dropdown-toggle" > 
 						<span class="profile-ava">
@@ -39,11 +39,11 @@
 					</a>
 					<ul class="dropdown-menu extended logout">
 						<div class="log-arrow-up"></div>
-						<li class="eborder-top"><a href="<%=application.getContextPath()%>/mypage/mypage_user"><i class="icon_profile"></i> MyPage(User)</a></li>
+						<li class="eborder-top"><a href="<%=application.getContextPath()%>/mypage/mypage_user"><i class="icon_profile"></i> MyPage</a></li>
 						<li><a href="login"><i class="icon_key_alt"></i> LogOut</a></li>
 					</ul>
 				</li>
-<%-- 			</c:if> --%>
+			</c:if>
 			
 		</ul>
 	</div>

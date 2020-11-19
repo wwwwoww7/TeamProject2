@@ -35,14 +35,23 @@
                     <a href="<%=application.getContextPath()%>" class="logo" style="font-weight: 700">BAN<span class="lite" style="color: #fff">숙</span>
 						<img  class="mg-2" width="40px" height="40px" src="<%=application.getContextPath()%>/resources/images/logoegg_line.png">
 		  		 	</a>
-                   <li class="nav-item"><a class="nav-link js-scroll-trigger" href="#classlist">수강목록</a></li>
-                   <li class="nav-item"><a class="nav-link js-scroll-trigger" href="#picklist">찜목록</a></li>
+		  		 	<!---------------------- 사용자가 수강생일때---------------------------------->
+                   	<li class="nav-item"><a class="nav-link js-scroll-trigger" href="#classlist">수강목록</a></li>
+                   	<li class="nav-item"><a class="nav-link js-scroll-trigger" href="#picklist">찜목록</a></li>
+                   
+                  	<!---------------------- 사용자가 강사일때-----------------------------------> 
+                    <li class="nav-item"><a class="nav-link js-scroll-trigger" href="#tutorlist">나의강의</a></li>
+                    <li class="nav-item"><a class="nav-link js-scroll-trigger" href="#notice">공지사항</a></li>
+                    <li class="nav-item"><a class="nav-link js-scroll-trigger" href="#classQA">강의문의</a></li>
                </ul>
            </div>
        </nav>
        
+       
        <!-- Page Content-->
        <div class="container-fluid p-0">
+       
+       <!---------------------- 사용자가 수강생일때---------------------------------->
            <!-- 수강목록-->
            <section class="resume-section" id="classlist">
                <div class="resume-section-content">
@@ -101,6 +110,96 @@
                    
                </div>
            </section>    
+           
+          <!---------------------- 사용자가 강사일때---------------------------------->  
+            <!-- 나의 강의-->
+           <section class="resume-section" id="tutorlist">
+	            <div class="resume-section-content">
+	                <h1 class="mb-0 text-primary">
+	                   	 나의 강의
+	                </h1>
+	                <br/>
+	                <script type="text/javascript">
+                   
+	                   function tutorClasslist(){
+	   					$.ajax({
+	   						url:"tutorClassList",
+	   						type: "POST",
+	   						success: function(data){
+	   								$("#tutorClassList").html(data);
+	   							}
+	
+	   						});
+	   					
+	   					}
+
+	                   jQuery(document).ready(function(){
+	                	   tutorClasslist();
+	                   }); 
+                   </script> 
+                   <div id="tutorClassList" ></div>
+	            </div>
+	        </section>
+	        <hr class="m-0" />
+	        
+	        <!-- 공지사항-->
+	        <section class="resume-section" id="notice">
+	            <div class="resume-section-content">
+	                <h1 class="mb-0 text-primary">
+	                    	공지사항
+	                </h1>
+	                <br/>
+	                <script type="text/javascript">
+                   
+	                   function tutorClassNotice(){
+	   					$.ajax({
+	   						url:"tutorClassNotice",
+	   						type: "POST",
+	   						success: function(data){
+	   								$("#tutorClassNotice").html(data);
+	   							}
+	
+	   						});
+	   					
+	   					}
+
+	                   jQuery(document).ready(function(){
+	                	   tutorClassNotice();
+	                   }); 
+                   </script> 
+                   <div id="tutorClassNotice" ></div>
+	            </div>
+	        </section>
+	        <hr class="m-0" />
+	
+	         <!-- 강의문의-->
+	         <section class="resume-section" id="classQA">
+	            <div class="resume-section-content">
+	                <h1 class="mb-0 text-primary">
+	                    	강의문의
+	                </h1>
+	                <br/>
+	                <script type="text/javascript">
+                   
+	                   function tutorClassQA(){
+	   					$.ajax({
+	   						url:"tutorClassQA",
+	   						type: "POST",
+	   						success: function(data){
+	   								$("#tutorClassQA").html(data);
+	   							}
+	
+	   						});
+	   					
+	   					}
+
+	                   jQuery(document).ready(function(){
+	                	   tutorClassQA();
+	                   }); 
+                   </script> 
+                   <div id="tutorClassQA" ></div>
+	            </div>
+	        </section>
            <hr class="m-0" />
          </div>
 		<jsp:include page="/WEB-INF/views/include/footer.jsp" />

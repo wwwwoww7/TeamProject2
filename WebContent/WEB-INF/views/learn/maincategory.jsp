@@ -31,13 +31,13 @@
 				<!-- The slideshow -->
 				<div class="carousel-inner">
 					<div class="carousel-item active">
-						<img src="<%=request.getContextPath()%>/resources/images/eventban3.jpg" alt="Los Angeles" width="1100" height="500">
+						<img src="<%=request.getContextPath()%>/resources/images/eventban1.png" alt="Los Angeles" width="1000" height="300">
 					</div>
 					<div class="carousel-item">
-						<img src="<%=request.getContextPath()%>/resources/images/eventban1.jpg" alt="Chicago" width="1100" height="500">
+						<img src="<%=request.getContextPath()%>/resources/images/eventban2.jpg" alt="Chicago" width="1000" height="300">
 					</div>
 					<div class="carousel-item">
-						<img src="<%=request.getContextPath()%>/resources/images/eventban3.jpg" alt="New York" width="1100" height="500">
+						<img src="<%=request.getContextPath()%>/resources/images/eventban2.jpg" alt="New York" width="1000" height="300">
 					</div>
 				</div>
 				
@@ -197,6 +197,7 @@
 
 
 	</div>
-	
+	<h4>지금, 최신 강의</h4>
+	<h4>지금, 강의 중 강의</h4>
 
 </section>

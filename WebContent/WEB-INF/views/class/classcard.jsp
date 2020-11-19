@@ -75,23 +75,28 @@
 	<div id="myCarousel" class="carousel slide" data-ride="carousel">
 		<div class="carousel-inner row w-100 mx-auto">
 			
-			<a href="class/classdetail">
+			
 				<div class="carousel-item col-md-3 active">
 					<div class="card">
-						<img class="card-img-top img-fluid" src="<%=request.getContextPath()%>/resources/images/thumnails/video.png" alt="Card image cap">
+						<a href="class/classdetail">
+							<img class="card-img-top img-fluid" src="<%=request.getContextPath()%>/resources/images/thumnails/video.png" alt="Card image cap">
+						</a>
 						<div class="card-body">
-							<h4 class="card-title">Card 1</h4>
-							<p class="card-text">
-								This is a longer card with supporting
-								text below as a natural lead-in to additional content. This
-								content is a little bit longer.</p>
-							<p class="card-text">
-								<small class="text-muted">Last updated 3 mins ago</small>
-							</p>
+							<a href="class/classdetail">
+								<h4 class="card-title">Card 1</h4>
+								<p class="card-text">
+									This is a longer card with supporting
+									text below as a natural lead-in to additional content. This
+									content is a little bit longer.
+								</p>
+								<p class="card-text">
+									<small class="text-muted">Last updated 3 mins ago</small>
+								</p>
+							</a>
 						</div>
 					</div>
 				</div>
-			</a>
+			
 			
 			<div class="carousel-item col-md-3">
 				<div class="card">

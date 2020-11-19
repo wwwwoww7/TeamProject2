@@ -14,6 +14,6 @@ public class ClassController {
 	
 	@GetMapping("/classdetail")
 	public String classDetail() {
-		return "redirect:/class/classdetail";
+		return "/class/classdetail";
 	}
 }

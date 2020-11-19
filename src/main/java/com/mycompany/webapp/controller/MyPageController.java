@@ -5,6 +5,7 @@ import org.slf4j.LoggerFactory;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 
 
@@ -43,4 +44,39 @@ public class MyPageController {
 		
 		return "mypage/userpicklist";
 	}
+	
+	//강사의 강의 목록
+	@PostMapping("/tutorClassList")
+	public String tutorClassList() {
+		
+		return "mypage/tutorclasslist";
+	}
+	
+	//강사의 공지사항 목록
+	@PostMapping("/tutorClassNotice")
+	public String tutorClassNotice() {
+		
+		return "mypage/tutorclassnotice";
+	}
+	
+	//강사의 공지사항 목록의 상세내용
+	@GetMapping("/noticeDetail")
+	public String noticeDetail() {
+		
+		return "mypage/noticedetail";
+	}
+	
+	//강사의 강의문의 목록
+	@PostMapping("/tutorClassQA")
+	public String tutorClassQA() {
+		
+		return "mypage/tutorclassqa";
+	}
+	//강사의 강의문의 목록
+	@GetMapping("/qaDetail")
+	public String qaDetail() {
+		
+		return "mypage/qadetail";
+	}
+	
 }

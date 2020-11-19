@@ -1,4 +1,6 @@
 <%@ page contentType="text/html; charset=UTF-8"%>
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
+
 <!DOCTYPE html>
 <html>
     <head>
@@ -24,8 +26,15 @@
        <nav class="navbar navbar-expand-lg navbar-dark bg-primary fixed-top" id="sideNav">
            <a class="navbar-brand js-scroll-trigger" href="#page-top">
                <span class="d-block d-lg-none">BAN숙</span>
-               <span class="d-none d-lg-block"><img class="img-fluid img-profile rounded-circle mx-auto mb-2" src="<%=application.getContextPath()%>/resources/images/loppy.png" alt="" /></span>
+               <span class="d-none d-lg-block">
+	               <a class="nav-link js-scroll-trigger" href="javascript:userEdit()">
+	               		<img class="img-fluid img-profile rounded-circle mx-auto mb-2" src="<%=application.getContextPath()%>/resources/images/loppy.png" />
+	               </a>
+               </span>
            </a>	
+           <script type="text/javascript">
+           		
+           </script>
            
            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
            <span class="navbar-toggler-icon"></span>
@@ -35,6 +44,7 @@
                     <a href="<%=application.getContextPath()%>" class="logo" style="font-weight: 700">BAN<span class="lite" style="color: #fff">숙</span>
 						<img  class="mg-2" width="40px" height="40px" src="<%=application.getContextPath()%>/resources/images/logoegg_line.png">
 		  		 	</a>
+		  		 	
 		  		 	<!---------------------- 사용자가 수강생일때---------------------------------->
                    	<li class="nav-item"><a class="nav-link js-scroll-trigger" href="#classlist">수강목록</a></li>
                    	<li class="nav-item"><a class="nav-link js-scroll-trigger" href="#picklist">찜목록</a></li>
@@ -51,6 +61,36 @@
        <!-- Page Content-->
        <div class="container-fluid p-0">
        
+       		<!-- 회원정보수정-->
+       		<!-- 회원정보수정은 누르면 뜨게 할거야~~-->
+           <section class="resume-section" id="useredit">
+               <div class="resume-section-content">
+                   <h1 class="mb-0 text-primary">
+                    	  회원정보수정
+                   </h1>
+                   <br/>
+
+                    <script type="text/javascript">
+                   
+	                   function userEdit(){
+	   					$.ajax({
+	   						url:"userEdit",
+	   						success: function(data){
+	   								$("#userEdit").html(data);
+	   							}
+	
+	   						});
+	   					
+	   					}
+
+	                   jQuery(document).ready(function(){
+	                	   userEdit();
+	                   }); 
+                   </script> 
+                   <div id="userEdit" ></div>
+                   
+               </div>
+           </section>
        <!---------------------- 사용자가 수강생일때---------------------------------->
            <!-- 수강목록-->
            <section class="resume-section" id="classlist">

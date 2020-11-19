@@ -18,7 +18,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 public class MyPageController {
 	private static final Logger logger = LoggerFactory.getLogger(MyPageController.class);
 	
-//*----------- 수강생 페이지------------------- *//
+	//*----------- 수강생 페이지------------------- *//
 	@RequestMapping("/mypage_user")
 	public String mypage_user() {
 		//로그인한 사람의 역할 구분하고 해당 페이지로 리턴해 놔야함!!
@@ -40,7 +40,7 @@ public class MyPageController {
 	
 	
 	
-//*----------- 강사 페이지------------------- *//		
+	//*----------- 강사 페이지------------------- *//		
 	
 	//강사의 강의 목록
 	@PostMapping("/tutorClassList")
@@ -74,6 +74,13 @@ public class MyPageController {
 	public String qaDetail() {
 		
 		return "mypage/qadetail";
+	}
+	
+	//*--------------회원정보수정---------------- *//
+	@GetMapping("/userEdit")
+	public String userEdit() {
+		
+		return "mypage/userEdit";
 	}
 		
 }

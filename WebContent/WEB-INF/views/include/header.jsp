@@ -25,7 +25,7 @@
 				<li class="dropdown"> 
 					<a href="<%=application.getContextPath()%>/login/login"  class="dropdown-toggle" > 
  						<span class="text-white">Login</span> 
- 					</a>
+ 					</a> 
  				</li>
 			</c:if>
 			<c:if test="${sessionMid != null}"> 

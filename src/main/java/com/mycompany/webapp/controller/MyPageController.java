@@ -5,6 +5,7 @@ import org.slf4j.LoggerFactory;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 
 
@@ -25,17 +26,57 @@ public class MyPageController {
 		return "mypage/mypage_user";
 	}
 	
-	@RequestMapping("/mypage_tutor")
-	public String mypage_tutor() {
+	//수강목록 불러오기
+		@GetMapping("/userclasslist")
+		public String user_classlist() {
+			return "mypage/userclasslist";
+		}
+			
+		@RequestMapping("/mypage_tutor")
+		public String mypage_tutor() {
+			
+			//로그인한 사람의 역할 구분하고 해당 페이지로 리턴해 놔야함!!
+			return "mypage/mypage_tutor";
+		}
 		
-		//로그인한 사람의 역할 구분하고 해당 페이지로 리턴해 놔야함!!
-		return "mypage/mypage_tutor";
-	}
-	
-	@GetMapping("/pickList")
-	public String pickList() {
-		logger.info("실행");
-		//로그인한 사람의 역할 구분하고 해당 페이지로 리턴해 놔야함!!
-		return "mypage/user_picklist";
-	}
+		@GetMapping("/userpicklist")
+		public String userpicklist() {
+			
+			return "mypage/userpicklist";
+		}
+		
+		//강사의 강의 목록
+		@PostMapping("/tutorClassList")
+		public String tutorClassList() {
+			
+			return "mypage/tutorclasslist";
+		}
+		
+		//강사의 공지사항 목록
+		@PostMapping("/tutorClassNotice")
+		public String tutorClassNotice() {
+			
+			return "mypage/tutorclassnotice";
+		}
+		
+		//강사의 공지사항 목록의 상세내용
+		@GetMapping("/noticeDetail")
+		public String noticeDetail() {
+			
+			return "mypage/noticedetail";
+		}
+		
+		//강사의 강의문의 목록
+		@PostMapping("/tutorClassQA")
+		public String tutorClassQA() {
+			
+			return "mypage/tutorclassqa";
+		}
+		//강사의 강의문의 목록
+		@GetMapping("/qaDetail")
+		public String qaDetail() {
+			
+			return "mypage/qadetail";
+		}
+		
 }

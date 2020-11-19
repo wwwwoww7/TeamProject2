@@ -55,56 +55,16 @@
 							</ol>
 						</div>
 					</div>
-					<div  class="input-group mb-3">
-					    <input type="text" style="float: right"  class="form-control-md" placeholder="Search" >
-					      <button style="float: right" type="submit"><i class="fa fa-search"  ></i></button>
-					     <div class="input-group-append"  >  </div>
-				  	</div>
-					
-					
-					
-					<script type="text/javascript">
-					
-					$(function() { 
-						openCity("ing");
-					});
-					function openCity( ingend ) {
-					
-							$.ajax({
-								url:"event/eventList",
-								data:{ingend:ingend},
-								success:function(data) {
-									$("#ingendview").html(data);
-								}
-							});	
-					}
-					</script>	
-						
-						
 					<div class="container-fluid">
-						<h4>전체이벤트 </h4>
-							<div class="tab">
-							  <a class="tablinksbtn btn-outline-secondary" href="javascript:openCity('ing')">진행중인 이벤트</a>
-							  <a class="tablinksbtn btn-outline-dark" href="javascript:openCity('end')">종료된 이벤트</a>
-							</div>
-						
+						<h4>이벤트 상세 </h4>
+
 						<div id="ingendview" class="tabcontent">
+  							100%환급
 						</div>
-						<tr>
-							<td colspan="4" style="text-align: center;">
-								<a class="btn btn-outline-primary btn-sm" href="javascript:boardList(1)">처음</a> 
-									<a class="btn btn-outline-info btn-sm" href="javascript:boardList(${pager.startPageNo-1})">이전</a> 
-								 		<a class="btn btn-danger btn-sm" href="javascript:boardList(${i})">${i}</a> 
-								 		<a class="btn btn-outline-info btn-sm" href="javascript:boardList(${i})">${i}</a> 
-								 <a class="btn btn-outline-info btn-sm" href="javascript:boardList(${pager.endPageNo+1})">다음</a>
-								 <a class="btn btn-outline-primary btn-sm" href="javascript:boardList(${pager.totalPageNo})">마지막</a> 
-							</td>
-						</tr>
 					</div>
   				</section>		
 				<jsp:include page="/WEB-INF/views/include/footer.jsp" />
 			</section>
-
 		</section>
 	</body>
 </html>

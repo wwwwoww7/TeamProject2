@@ -143,14 +143,20 @@
 					<div class="carousel-item col-md-4 active">
 						<div class="card">
 							<div class="card-body">
+								
 								<h4 class="card-title">Card 1</h4>
-								<img height="100%" class="card-img-top img-fluid" src="<%=request.getContextPath()%>/resources/images/thumnails/video01.png" alt="Card image cap">
+								<a href="<%=request.getContextPath()%>/class/classdetail?classNo=1">
+									<img height="100%" class="card-img-top img-fluid" src="<%=request.getContextPath()%>/resources/images/thumnails/video01.png" alt="Card image cap">
+								</a>
+								<a href="<%=request.getContextPath()%>/class/classdetail?classNo=1">
 								<p class="card-text">This is a longer card with supporting
 									text below as a natural lead-in to additional content. This
 									content is a little bit longer.</p>
+								</a>
 								<p class="card-text">
 									<small class="text-muted">Last updated 3 mins ago</small>
 								</p>
+								
 							</div>
 						</div>
 					</div>
@@ -158,10 +164,14 @@
 						<div class="card">
 							<div class="card-body">
 								<h4 class="card-title">Card 2</h4>
-								<img height="100%"  class="card-img-top img-fluid" src="<%=request.getContextPath()%>/resources/images/thumnails/video02.png" alt="Card image cap">
-								<p class="card-text">This is a longer card with supporting
-									text below as a natural lead-in to additional content. This
-									content is a little bit longer.</p>
+								<a href="<%=request.getContextPath()%>/class/classdetail?classNo=1">
+									<img height="100%"  class="card-img-top img-fluid" src="<%=request.getContextPath()%>/resources/images/thumnails/video02.png" alt="Card image cap">
+								</a>
+								<a href="<%=request.getContextPath()%>/class/classdetail?classNo=1">
+									<p class="card-text">This is a longer card with supporting
+										text below as a natural lead-in to additional content. This
+										content is a little bit longer.</p>
+								</a>
 								<p class="card-text">
 									<small class="text-muted">Last updated 3 mins ago</small>
 								</p>
@@ -172,10 +182,14 @@
 						<div class="card">
 							<div class="card-body">
 								<h4 class="card-title">Card 3</h4>
-								<img class="card-img-top img-fluid" src="<%=request.getContextPath()%>/resources/images/thumnails/video03.png" alt="Card image cap">
-								<p class="card-text">This is a longer card with supporting
+								<a href="<%=request.getContextPath()%>/class/classdetail?classNo=1">
+									<img class="card-img-top img-fluid" src="<%=request.getContextPath()%>/resources/images/thumnails/video03.png" alt="Card image cap">
+								</a>
+								<a href="<%=request.getContextPath()%>/class/classdetail?classNo=1">
+									<p class="card-text">This is a longer card with supporting
 									text below as a natural lead-in to additional content. This
 									content is a little bit longer.</p>
+								</a>
 								<p class="card-text">
 									<small class="text-muted">Last updated 3 mins ago</small>
 								</p>
@@ -186,10 +200,14 @@
 						<div class="card">
 							<div class="card-body">
 								<h4 class="card-title">Card 4</h4>
-								<img class="card-img-top img-fluid" src="<%=request.getContextPath()%>/resources/images/thumnails/video04.png" alt="Card image cap">
-								<p class="card-text">This is a longer card with supporting
-									text below as a natural lead-in to additional content. This
-									content is a little bit longer.</p>
+								<a href="<%=request.getContextPath()%>/class/classdetail?classNo=1">
+									<img class="card-img-top img-fluid" src="<%=request.getContextPath()%>/resources/images/thumnails/video04.png" alt="Card image cap">
+								</a>
+								<a href="<%=request.getContextPath()%>/class/classdetail?classNo=1">
+									<p class="card-text">This is a longer card with supporting
+										text below as a natural lead-in to additional content. This
+										content is a little bit longer.</p>
+								</a>
 								<p class="card-text">
 									<small class="text-muted">Last updated 3 mins ago</small>
 								</p>
@@ -215,8 +233,9 @@
 						<div class="card">
 							<div class="card-body">
 								<h4 class="card-title">Card 6</h4>
-								<img  class="card-img-top img-fluid" src="<%=request.getContextPath()%>/resources/images/thumnails/video06.png" alt="Card image cap">
-								
+								<a href="<%=request.getContextPath()%>/class/classdetail?classNo=1">
+									<img  class="card-img-top img-fluid" src="<%=request.getContextPath()%>/resources/images/thumnails/video06.png" alt="Card image cap">
+								</a>							
 								<p class="card-text">This is a longer card with supporting
 									text below as a natural lead-in to additional content. This
 									content is a little bit longer.</p>
@@ -231,11 +250,14 @@
 						<div class="card">
 							<div class="card-body">
 								<h4 class="card-title">강의 7</h4>
-								<img height="100%"  class="card-img-top img-fluid" src="<%=request.getContextPath()%>/resources/images/thumnails/video07.png" alt="Card image cap">
-								
-								<p class="card-text">This is a longer card with supporting
+								<a href="<%=request.getContextPath()%>/class/classdetail?classNo=1">
+									<img height="100%"  class="card-img-top img-fluid" src="<%=request.getContextPath()%>/resources/images/thumnails/video07.png" alt="Card image cap">
+								</a>
+								<a href="<%=request.getContextPath()%>/class/classdetail?classNo=1">
+									<p class="card-text">This is a longer card with supporting
 									text below as a natural lead-in to additional content. This
 									content is a little bit longer.</p>
+								</a>
 								<p class="card-text">
 									<small class="text-muted">Last updated 3 mins ago</small>
 								</p>

@@ -52,8 +52,7 @@
 		}
 		
 		
-		.cartlist {
-			
+		.cartlist { 
 			margin: auto;
 			position: relative;
 			
@@ -70,7 +69,7 @@
 			text-align:center;
 			padding: 20px 0 ;
 			margin : 10px;
-			border-bottom:1px solid	 #CCC; 
+			border-bottom:1px solid #CCC; 
 			height:20px;
 			font-size: 14px 
 		}
@@ -78,15 +77,18 @@
 			height: 170px;
 			margin:30px;
 		}
-		.cartlist tfoot td {
+		.cartlist tfoot tr.pay_start{
+			border-top:2px solid #945b00;
+			
+		}
+		.cartlist tfoot td{
+			border-top:2px solid #945b00;
+			text-align:center;
 			padding: 20px 0 ;
-			margin : 10px;
-			border-top:1px solid #CCC; 
-			border-bottom:2px solid #945b00;
-			height:20px;
+			margin : 10px;	
 			font-size: 14px; 
 			font-weight: bold;
-			font-style: #000;
+			font-style: black;
 		
 		}
 		.cartlist #id{
@@ -158,7 +160,7 @@
 							<h3>주문상품확인</h3>
 						
 						<div id="sm_title">
-							<span style="font-weight: bold">01 장바구니 > </span><span id="2">02 주문서작성/결제 > </span><span>03 주문완료</span>
+							<span style="color:black; font-weight: bold">01 장바구니 > </span><span id="2">02 주문서작성/결제 > </span><span>03 주문완료</span>
 						</div>
 						</div>
 					</div>	
@@ -190,8 +192,6 @@
 						          <td width="200">상품금액</td>
 						          <td width="150">합계금액</td>
 						        </tr>
-					   		</tbody>
-					   		<tfoot>
 								<tr>
 									<td colspan="5" style="text-align: center;">
 										<a class="btn btn-outline-primary btn-sm" href="#">처음</a> 
@@ -202,22 +202,39 @@
 										<a class="btn btn-outline-info btn-sm" href="#">다음</a> 
 										<a class="btn btn-outline-primary btn-sm" href="#">맨끝</a></td>
 								</tr>
+					   		</tbody>
+					   		<tfoot>
 								<tr>
 					   				<td colspan="2" id="cnum">선택한 상품의 개수</td>
 					   				<td colspan="3" id="csum">최종 결제금액</td>
 					   			</tr>
-					   			<tr id="btn_next">
+					   			<tr class="pay_start">
 					   				<td colspan="5">
-										<a class="btn btn-info" href="<%=application.getContextPath()%>/cart/payment">결제하기</a>	
+										<a class="btn btn-info" href="javascript:payment()">결제하기</a>
+					   					<script type="text/javascript">
+						   					function payment(mid){
+						   						if(mid!=null){
+						   							location.href="<%=application.getContextPath()%>/cart/payment";
+						   						}else{
+						   							var result = confirm("로그인 후 결제 하실 수 있습니다.");
+						   							
+						   							if(result==true){
+						   								location.href="<%=application.getContextPath()%>/login/login";
+						   							}else{
+						   								return;
+						   							}
+						   						}
+						   					}
+					   						
+					   					</script>
 					   				</td>
 					   			</tr>
 					   		</tfoot>
 					   			
 					   			
 						</table>
-						<div id="payment_result" style="margin-top:30px"></div>
+						
 					</div>
-					
 				</div>
 				</section>
 			

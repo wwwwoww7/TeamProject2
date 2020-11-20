@@ -163,7 +163,7 @@
 							<h3>주문상품확인</h3>
 						
 						<div id="sm_title">
-							<span>01 장바구니 > <span>02 주문서작성/결제 > </span style="font-weight: bold" >03 주문완료</span>
+							<span>01 장바구니 ></span> <span>02 주문서작성/결제 > </span> <span style="color:black; font-weight: bold">03 주문완료</span>
 						</div>
 						</div>
 					</div>	
@@ -237,7 +237,7 @@
 					   		<tfoot>
 								<tr>
 									<td colspan="2">
-										<a class="btn btn-info btn-sm" href="<%=application.getContextPath()%>/cart/pay_complate">결제하기</a>	
+										<a class="btn btn-info" href="<%=application.getContextPath()%>/cart/pay_complate">결제하기</a>	
 					   				</td>
 					   			</tr>
 					   		</tfoot>

@@ -9,7 +9,7 @@
 		</div>
 	</div>
 	<a href="<%=application.getContextPath()%>" class="logo">BAN<span class="lite">숙</span>
-		<img  class="mg-2" width="50px" height="50px" src="<%=application.getContextPath()%>/resources/images/logoegg_line.png">
+		<img  class="mb-3" width="50px" height="50px" src="<%=application.getContextPath()%>/resources/images/logoegg_line.png">
 	</a>
 
 	<div class="top-nav notification-row">

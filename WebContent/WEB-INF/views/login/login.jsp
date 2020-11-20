@@ -38,7 +38,7 @@
 						<i class="icon_lock_alt"></i>
 					</p>
 					<div class="input-group">
-						<span class="input-group-addon"><i class="icon_profile"></i>이름</span>
+						<span class="input-group-addon"><i class="icon_profile"></i> 이 름 </span>
 						<input type="text" class="form-control" placeholder="Username"
 							autofocus>
 					</div>
@@ -55,7 +55,8 @@
 						</span>
 						
 					</label>
-					<button class="btn btn-primary btn-lg btn-block" type="submit">Sign in</button>
+					<a class="btn btn-primary btn-lg btn-block" href="<%=request.getContextPath()%>/" type="submit">Sign in</a>
+					
 					
 					<a class="btn btn-info btn-lg btn-block"  href="<%=request.getContextPath()%>/login/join">Join</a>
 				</div>

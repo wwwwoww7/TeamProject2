@@ -28,6 +28,7 @@
  					</a> 
  				</li>
 			</c:if>
+			
 			<c:if test="${sessionMid != null}"> 
 				<li class="dropdown">
 					<a data-toggle="dropdown" class="dropdown-toggle" > 
@@ -37,11 +38,14 @@
 						<span class="username">닉네임</span> 
 						<b class="caret"></b>
 					</a>
+					<div class="log-arrow-up">
 					<ul class="dropdown-menu extended logout">
-						<div class="log-arrow-up"></div>
+						
 						<li class="eborder-top"><a href="<%=application.getContextPath()%>/mypage/mypage_user"><i class="icon_profile"></i> MyPage</a></li>
-						<li><a href="login"><i class="icon_key_alt"></i> LogOut</a></li>
+						<li><a href="<%=application.getContextPath()%>/"><i class="icon_key_alt"></i> LogOut</a></li>
+						
 					</ul>
+					</div>
 				</li>
 			</c:if>
 			

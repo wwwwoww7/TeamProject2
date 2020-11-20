@@ -67,7 +67,7 @@
             });
          }
    </script> 
-
+<!-- 공지사항 상세보기 -->
   <script type="text/javascript">
 	function noticeDetail() {
 		$.ajax({

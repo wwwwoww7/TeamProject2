@@ -24,19 +24,6 @@
 			<textarea style="width:100%"readonly>내용</textarea>
 		</div>
 		
-		<a class="btn" href="javascript:myQa()">답변</a>
-		<script type="text/javascript">
-			function myQa(){
-					$.ajax({
-						url:"myQa",
-						success: function(data){
-								$("#myqa").html(data);
-							}
-	
-						});
-					} 
-		</script>
-		
 		<a class="btn" href="javascript:myQa()">확인</a>
 		<script type="text/javascript">
 			function myQa(){

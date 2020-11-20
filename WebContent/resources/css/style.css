@@ -544,7 +544,7 @@ ul.sidebar-menu , ul.sidebar-menu li ul.sub{
 
 ul.sidebar-menu {
 
-    margin-top: 73px;
+    margin-top: 80px;
 
 }
 
@@ -3582,7 +3582,7 @@ div[data-role="editor-toolbar"] {
 
     padding-right: 15px;
 
-    margin-top: 45px;
+    margin-top: 20px;
 
 }
 
@@ -3594,7 +3594,7 @@ div[data-role="editor-toolbar"] {
 
     display: inline-block;
 
-    font-size: 20px;
+    font-size: 40px;
 
 }
 

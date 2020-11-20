@@ -9915,7 +9915,7 @@ span.customSelect.changed {
 
 .carousel-inner img {
     width: 100%;
-    height: 100%;
+    height: 400px;
   }
 
 
@@ -10045,9 +10045,9 @@ span.customSelect.changed {
 		width: 100%;
 	}
 
-		.image.fit img {
-			width: 100%;
-		}
+	.image.fit img {
+		width: 100%;
+	}
 
 	.image.main {
 		display: block;

@@ -1,10 +1,17 @@
 package com.mycompany.webapp.controller;
 
+import java.io.IOException;
+import java.io.PrintWriter;
+
+import javax.servlet.http.HttpServletResponse;
+
+import org.json.JSONObject;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 
 
@@ -43,7 +50,7 @@ public class CommunityController {
 	@GetMapping("/boardReview")
 	public String boardReview(Model model) {
 		model.addAttribute("cate", "review");
-		return "community/community_list";
+		return "community/community_list_review";
 	}
 	
 	@GetMapping("/boardDetail")
@@ -56,6 +63,35 @@ public class CommunityController {
 	public String boardWrite() {
 		
 		return "community/community_writeform";
+	}
+	
+	@GetMapping("/boardWriteReview")
+	public String boardWriteReviewform() {
+		
+		return "community/community_reviewform";
+	}
+	
+	@PostMapping("/boardWriteReview")
+	public void boardWriteReview (/*Dto*/ HttpServletResponse response) throws Exception {
+		logger.info("실행");
+		JSONObject object  = new JSONObject();
+		object.put("result", "success");
+		
+		
+		String json = object.toString(); //{"result" : "success"}
+		
+		//응답보내기
+		PrintWriter out = response.getWriter();
+		response.setContentType("application/json;charset=utf-8");
+		out.println(json);
+		out.flush();
+		out.close();
+	}
+	
+	@GetMapping("/boardUpdate")
+	public String boardUpdate() {
+		
+		return "community/community_updateform";
 	}
 }
 	 

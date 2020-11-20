@@ -7,12 +7,25 @@
 		<!-- 글쓰기 -->
 		<div class="sector"> 
 			<div align="right">
+				
+				 <!-- selectbox --> 
+					<div class="dropdown">
+						<button align="right" type="button" class="btn btn-primary dropdown-toggle " data-toggle="dropdown" style="float:right;">
+							 전체
+						</button>
+						<div class="dropdown-menu">
+							<a class="dropdown-item" href="#">건강</a>
+							<a class="dropdown-item" href="#">커리어</a>
+							<a class="dropdown-item" href="#">머니</a>
+						</div>
+					</div>			 
+				
 				<c:if test="${sessionMid==null}">
-					<a class="btn btn-outline-primary" style="border:1px solid #007BFF; float:right; " href="javascript:boardWrite()">글쓰기</a>
+					<a class="btn btn-outline-primary" style="border:1px solid #007BFF; float:right; " href="javascript:boardWriteReview()">글쓰기</a>
 						<script type="text/javascript">
-							function boardWrite() {
+							function boardWriteReview() {
 								$.ajax({
-										url:"community/boardWrite",
+										url:"community/boardWriteReview",
 										success:function(data) {
 										$("#fun1_result").html(data);
 										}

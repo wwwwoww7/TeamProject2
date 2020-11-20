@@ -27,9 +27,9 @@
  						<span class="text-white">Login</span> 
  					</a> 
  				</li>
-			</c:if>
+			</c:if> 
 			
-			<c:if test="${sessionMid != null}"> 
+			<c:if test="${sessionMid == null}"> 
 				<li class="dropdown">
 					<a data-toggle="dropdown" class="dropdown-toggle" > 
 						<span class="profile-ava">

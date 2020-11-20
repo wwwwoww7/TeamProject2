@@ -3,8 +3,23 @@
 <p>${board}</p>
 
 
-<form id="boardWriteForm">
+<form id="boardReviewForm">
 	<!-- <table style="width:auto" class="table table-sm table-bordered"> -->
+	
+	
+	
+	
+	강의선택 : <select id="mcity" name="mcity">
+ 				<c:forEach var="city" items="${cityList}">
+ 					<c:if test="${city.value != ch11Member.mcity}">
+ 						<option value="${city.value}">${city.label}</option>
+ 					</c:if>
+ 					<c:if test="${city.value == ch11Member.mcity}">
+ 						<option value="${city.value}" selected>${city.label}</option>
+ 					</c:if>
+ 					</c:forEach>
+ 			</select>
+	
 	<div class="input-group">
 		<div class="input-group-prepend"><span class="input-group-text">btitle</span></div>
 		<input id="btitle" type="text" name="btitle" class="form-control">
@@ -30,6 +45,9 @@
 		<a class="btn btn-info" href="javascript:boardWrite()">글쓰기</a>
 		<script type="text/javascript">
 			function boardWrite() {
+				console.log("후기 글작성 완료");
+				
+				
 				var btitle = $("#btitle").val().trim();
 				if(btitle == "") { $("#btitleError").text("필수"); }
 				else { $("#btitleError").text(""); }
@@ -45,14 +63,15 @@
 				var mid = $("#mid").val().trim();
 				
 				$.ajax({
-					url:"boardWrite",
+					url:"community/boardWriteReview",
 					method:"post",
 					data: {btitle:btitle, bcontent:bcontent, mid:mid},
 					success:function(data) {
-						if(data.result == "success") {
-							boardList();
-						}
-						console.log(data);
+						
+						
+						fun5();
+						
+						
 					}
 				});
 			}

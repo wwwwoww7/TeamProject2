@@ -20,6 +20,7 @@ public class HomeController {
 	public String content() {
 		logger.info("실행");
 		return "home";
+//		return "test";
 	} 
 	
 

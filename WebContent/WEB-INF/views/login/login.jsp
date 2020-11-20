@@ -37,15 +37,19 @@
 					<p class="login-img">
 						<i class="icon_lock_alt"></i>
 					</p>
+		
 					<div class="input-group">
 						<span class="input-group-addon"><i class="icon_profile"></i> 이 름 </span>
-						<input type="text" class="form-control" placeholder="Username"
-							autofocus>
+						<input type="text" class="form-control" placeholder="Username"autofocus>
 					</div>
 					<div class="input-group">
 						<span class="input-group-addon"><i class="icon_key_alt"></i>비밀번호</span>
 						<input type="password" class="form-control" placeholder="Password">
 					</div>
+					
+					
+					
+					
 					<label class="checkbox"> 
 						<input type="checkbox" value="remember-me"> 
 							Remember me 

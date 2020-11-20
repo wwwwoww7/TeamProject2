@@ -37,7 +37,6 @@
 		</script>
 	</head>
 	
-	
 	<body>
 		<!-- container section start -->
   		<section id="container" class="">
@@ -87,7 +86,7 @@
 									}
 								</script>
 							<li class="nav-item"><a class="nav-link" href="javascript:fun3()">커리어</a></li>
-							<script>
+								<script>
 									function fun3(){
 										$.ajax({
 											url : "community/boardCareer" , 
@@ -98,7 +97,7 @@
 									}
 								</script>
 							<li class="nav-item"><a class="nav-link" href="javascript:fun4()">머니</a></li>
-							<script>
+								<script>
 									function fun4(){
 										$.ajax({
 											url : "community/boardMoney" , 
@@ -109,7 +108,7 @@
 									}
 								</script>
 							<li class="nav-item"><a class="nav-link" href="javascript:fun5()">후기</a></li>
-							<script>
+								<script>
 									function fun5(){
 										$.ajax({
 											url : "community/boardReview" , 
@@ -119,89 +118,13 @@
 										});
 									}
 								</script>
-								
 						</ul>
 						<div id="fun1_result"></div>
 					</div>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-					<!-- 표시2 -->
-					
-					
-					
-					
-					
-					
-					
-					
-					
-					
-					
-					
-					
-					
-					
-					
-					
-					
-					
-					
-					
-					
-					
-					
-					
-					
-					
-					
-					
-					
-					
-					
-					
-					
-					</div>
-	
-				</section>
-				
-				
-				
-				
-				
-				
-				
+				</div>
 			</section>
-			<jsp:include page="/WEB-INF/views/include/footer.jsp" />
-
-
-
 		</section>
-	</body>
+	<jsp:include page="/WEB-INF/views/include/footer.jsp" />
+</section>
+</body>
 </html>

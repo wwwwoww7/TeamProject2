@@ -10,26 +10,26 @@
 		<div class="sector"> 
 			<div align="right">
 				<c:if test="${cate =='review'}">
-				<!-- selectbox -->
-					<div class="sector">
-						<div align="right" style="margin-top:7px; float:right;">
-							<select class="dropdown-toggle">
-							    <option>전체</option>
-							    <option>건강</option>
-							    <option>커리어</option>
-							    <option>머니</option>
-					 		 </select>
+				 <!-- selectbox -->
+					<div class="dropdown">
+						<button align="right" type="button" class="btn btn-primary dropdown-toggle " data-toggle="dropdown" style="float:right;">
+							 전체
+						</button>
+						<div class="dropdown-menu">
+							<a class="dropdown-item" href="#">건강</a>
+							<a class="dropdown-item" href="#">커리어</a>
+							<a class="dropdown-item" href="#">머니</a>
 						</div>
-					</div>		
+					</div>			 
 				</c:if>
 				<c:if test="${sessionMid==null}">
-					<a class="btn btn-outline-primary" style="border:1px solid primary; float:right; border-style:1px" href="javascript:boardList()">글쓰기</a>
+					<a class="btn btn-outline-primary" style="border:1px solid #007BFF; float:right; " href="javascript:boardWrite()">글쓰기</a>
 						<script type="text/javascript">
-							function boardList() {
+							function boardWrite() {
 								$.ajax({
-										url:"boardList",
+										url:"community/boardWrite",
 										success:function(data) {
-										$("#board_result").html(data);
+										$("#fun1_result").html(data);
 										}
 									});
 								}
@@ -37,7 +37,7 @@
 					</c:if>
 				</div>
 			</div>	
-	<div id="board_result"></div>
+	<div id="fun1_result"></div>
 	
 	<table class="table table-hover">
 		<thead>

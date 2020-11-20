@@ -18,40 +18,45 @@ public class CommunityController {
 	private static final Logger logger = LoggerFactory.getLogger(CommunityController.class);
 
 	@GetMapping("/boardAll")
-	public String boardall(Model model) {
+	public String boardAll(Model model) {
 		model.addAttribute("cate", "all");
 		return "community/community_list";
 	}
 	@GetMapping("/boardHealth")
-	public String boardhealth(Model model) {
+	public String boardHealth(Model model) {
 		model.addAttribute("cate", "health");
 		return "community/community_list";
 	}
 	
 	@GetMapping("/boardCareer")
-	public String boardcareer(Model model) {
+	public String boardCareer(Model model) {
 		model.addAttribute("cate", "career");
 		return "community/community_list";
 	}
 	
 	@GetMapping("/boardMoney")
-	public String boardmoeny(Model model) {
+	public String boardMoeny(Model model) {
 		model.addAttribute("cate", "money");
 		return "community/community_list";
 	}
 	
 	@GetMapping("/boardReview")
-	public String boardreview(Model model) {
+	public String boardReview(Model model) {
 		model.addAttribute("cate", "review");
 		return "community/community_list";
 	}
 	
 	@GetMapping("/boardDetail")
-	public String boarddetail() {
+	public String boardDetail() {
 		
 		return "community/community_detail";
 	}
-
+	
+	@GetMapping("/boardWrite")
+	public String boardWrite() {
+		
+		return "community/community_writeform";
+	}
 }
 	 
 	

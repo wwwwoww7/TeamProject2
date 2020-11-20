@@ -7,7 +7,6 @@
 	<div>
 		<div>
 		
-			
 			<br/>
 			<span>번호:</span> 
 			<span></span> <br/>

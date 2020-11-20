@@ -54,14 +54,28 @@
 		</td>
 	</tr>
   </table>
+	<br/>
+   <a class="btn" href="javascript:noticeEdit()">글쓰기</a>
+   <script type="text/javascript"> 
+       function noticeEdit(){
+         $.ajax({
+            url:"noticeEdit",
+            type: "POST",
+            success: function(data){
+                  $("#tutorClassNotice").html(data);
+               }
+            });
+         }
+   </script> 
+
   <script type="text/javascript">
-			function noticeDetail() {
-				$.ajax({
-					url:"noticeDetail",
-					success:function(data) {
-						$("#tutorClassNotice").html(data);
-					}
-				});
+	function noticeDetail() {
+		$.ajax({
+			url:"noticeDetail",
+			success:function(data) {
+				$("#tutorClassNotice").html(data);
 			}
+		});
+	}
 	</script>
 </div>

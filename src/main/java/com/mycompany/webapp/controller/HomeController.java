@@ -1,11 +1,18 @@
 package com.mycompany.webapp.controller;
 
+import java.util.List;
+
+import javax.annotation.Resource;
+
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
+
+import com.mycompany.webapp.dto.ClassDto;
+import com.mycompany.webapp.service.ClassService;
 
 
 /**
@@ -23,10 +30,16 @@ public class HomeController {
 //		return "test";
 	} 
 	
+	
+	@Resource
+	ClassService classService;
 
 	@GetMapping("/allCategory")
 	public String allCategory(Model model) {
 		model.addAttribute("category" ,"allCategory");
+		
+		
+		
 		return "learn/maincategory";
 	}
 	
@@ -70,7 +83,16 @@ public class HomeController {
 	 
 	
 	@GetMapping("/classCardList")
-	public String classCardList() {
+	public String classCardList(Model model) {
+
+		
+		List<ClassDto> classList = classService.getClassList(2);
+		model.addAttribute("HotclassList", classList);
+		
+		
+		
+		
+		
 		return "class/classcard";
 	}
 	

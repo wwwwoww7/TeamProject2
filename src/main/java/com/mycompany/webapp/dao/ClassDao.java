@@ -27,18 +27,18 @@ public class ClassDao {
 	
 	/* 20. 11. 23  지은 */
 	public List<ClassDto> selectClasses() {
-		List<ClassDto> classList = sst.selectList("mybatis.mapper.member.selectClasses");
+		List<ClassDto> classList = sst.selectList("mybatis.mapper.class.selectClasses");
 		return classList;
 	}
 	
 	
 	public List<ClassDto> selectClassesOrderByNew() {
-		List<ClassDto> classList = sst.selectList("mybatis.mapper.member.selectClassesOrderByNew");
+		List<ClassDto> classList = sst.selectList("mybatis.mapper.class.selectClassesOrderByNew");
 		return classList;
 	}
 
 	public List<ClassDto> selectClassesOrderByHot() {
-		List<ClassDto> classList = sst.selectList("mybatis.mapper.member.selectClassesOrderByNew");
+		List<ClassDto> classList = sst.selectList("mybatis.mapper.class.selectClassesOrderByHot");
 		return classList;
 	}
 

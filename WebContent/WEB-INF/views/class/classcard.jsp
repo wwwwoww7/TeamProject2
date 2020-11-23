@@ -123,6 +123,15 @@
 		<div class="container-fluid"> 
 			<div id="myCarousel" class="carousel slide" data-ride="carousel">
 				<div class="carousel-inner row w-100 mx-auto">
+				
+				
+				
+				
+					<c:forEach var="hotclass" items="${HotclassList}">
+						<p>${hotclass.class_no } , ${hotclass.class_nm } , ${hotclass.class_thum }</p><br/>
+					</c:forEach>				
+				
+				
 					<%-- 
 					<c:forEach var="i" begin="1" end="7">
 						<div class="carousel-item col-md-4 active">

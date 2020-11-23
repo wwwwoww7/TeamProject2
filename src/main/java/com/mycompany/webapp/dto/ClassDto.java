@@ -12,6 +12,8 @@ public class ClassDto {
 	private int class_video_no;
 	private int class_price;
 	private int class_tot_time;
+	private double review_star;
+	
 	
 	public int getClass_no() {
 		return class_no;
@@ -72,6 +74,12 @@ public class ClassDto {
 	}
 	public void setClass_tot_time(int class_tot_time) {
 		this.class_tot_time = class_tot_time;
+	}
+	public double getReview_star() {
+		return review_star;
+	}
+	public void setReview_star(double review_star) {
+		this.review_star = review_star;
 	}
 
 	

@@ -1,0 +1,24 @@
+package com.mycompany.webapp.dao;
+
+import java.util.List;
+
+import javax.annotation.Resource;
+
+import org.mybatis.spring.SqlSessionTemplate;
+import org.springframework.stereotype.Repository;
+
+import com.mycompany.webapp.dto.ClassQA;
+
+@Repository
+public class ClassQADao {
+
+	@Resource
+	private SqlSessionTemplate sst;
+	
+	//사용자가 문의한 내역 가져오기
+	public List<ClassQA> selectMyQa(String user_id){
+		List<ClassQA> qaList = sst.selectList("mybatis.mapper.member.selectMyQa", user_id);
+		return qaList;
+	}
+	
+}

@@ -1,11 +1,12 @@
 package com.mycompany.webapp.dto;
 
-public class User {
+public class UserDto {
 	private String user_id;
 	private String user_pw;
 	private String user_nm;
 	private String user_nick;
 	private String user_tel;
+	private String user_email;
 	private String user_pro_img;
 	private String user_type;
 	
@@ -38,6 +39,12 @@ public class User {
 	}
 	public void setUser_tel(String user_tel) {
 		this.user_tel = user_tel;
+	}
+	public String getUser_email() {
+		return user_email;
+	}
+	public void setUser_email(String user_email) {
+		this.user_email = user_email;
 	}
 	public String getUser_pro_img() {
 		return user_pro_img;

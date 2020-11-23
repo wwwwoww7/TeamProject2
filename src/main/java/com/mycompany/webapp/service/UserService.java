@@ -7,7 +7,7 @@ import org.slf4j.LoggerFactory;
 import org.springframework.stereotype.Service;
 
 import com.mycompany.webapp.dao.UserDao;
-import com.mycompany.webapp.dto.User;
+import com.mycompany.webapp.dto.UserDto;
 
 
 @Service //root에서 관리객체가 만들어진다.
@@ -18,7 +18,7 @@ public class UserService {
 	@Resource
 	private UserDao userDao;
 	
-	public void join(User user) {
+	public void join(UserDto user) {
 		userDao.insert(user);
 	}
 	

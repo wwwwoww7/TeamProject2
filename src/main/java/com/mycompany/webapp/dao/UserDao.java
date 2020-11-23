@@ -8,7 +8,7 @@ import org.mybatis.spring.SqlSessionTemplate;
 import org.springframework.stereotype.Repository;
 
 
-import com.mycompany.webapp.dto.User;
+import com.mycompany.webapp.dto.UserDto;
 
 @Repository //root에서 관리객체가 되어야 하기 때문에, 
 public class UserDao {
@@ -16,8 +16,7 @@ public class UserDao {
 	@Resource
 	private SqlSessionTemplate sst; //injection. 
 	
-	
-	  public int insert(User user) { //객체 이것저것 insert해서 myBatis로 보내주려고 
+	  public int insert(UserDto user) { //객체 이것저것 insert해서 myBatis로 보내주려고 
 		  int row = sst.insert("mybatis.mapper.user.insert", user); 
 		  return row; 
 	  }

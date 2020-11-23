@@ -42,11 +42,11 @@
 			}
 		</script>	
 		
-		<a class="btn btn-danger btn-sm" href="javascript:boardUpdate()">수정</a>
+		<a class="btn btn-danger btn-sm" href="javascript:boardUpdateReview()">수정</a>
 		<script type="text/javascript">
-			function boardUpdate() {
+			function boardUpdateReview() {
 				$.ajax({
-					url:"community/boardUpdate",
+					url:"community/boardUpdateReview",
 					method:"post",
 					success:function(data) {
 						$("#fun1_result").html(data);
@@ -56,7 +56,8 @@
 					}
 				});
 			}
-		</script>	
+		</script>
+		
 		<a class="btn btn-info btn-sm" href="community" style="float:right" >목록</a>	
 	</div>
 </div> 

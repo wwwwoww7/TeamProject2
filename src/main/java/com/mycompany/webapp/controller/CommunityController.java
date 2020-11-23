@@ -59,6 +59,12 @@ public class CommunityController {
 		return "community/community_detail";
 	}
 	
+	@GetMapping("/boardDetailReview")
+	public String boardDetailReview() {
+		
+		return "community/community_detail_review";
+	}
+	
 	@GetMapping("/boardWrite")
 	public String boardWrite() {
 		
@@ -88,11 +94,24 @@ public class CommunityController {
 		out.close();
 	}
 	
-	@GetMapping("/boardUpdate")
+	@PostMapping("/boardUpdate")
 	public String boardUpdate() {
 		
 		return "community/community_updateform";
 	}
+	
+	@PostMapping("/boardUpdateReview")
+	public String boardUpdateReview() {
+		
+		return "community/community_updateform_review";
+	}
+	
+	@PostMapping("/boardDelete")
+	public String boardDelete() {
+		
+		return "community/community";
+	}
+	
 }
 	 
 	

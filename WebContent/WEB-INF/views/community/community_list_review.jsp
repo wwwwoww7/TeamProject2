@@ -52,7 +52,7 @@
 			<tr>
 				<td>전체공지</td>
 				<td>건강</td>
-				<td><a href="javascript:boardDetail()">야구방공지</a></td>
+				<td><a href="javascript:boardDetailReview()">야구방공지</a></td>
 				<td>2020.8.7</td>
 				<td>1254</td>
 				<td>354</td>
@@ -105,9 +105,9 @@
 		
 	</table>
 	<script type="text/javascript">
-			function boardDetail() {
+			function boardDetailReview() {
 				$.ajax({
-					url:"<%=request.getContextPath()%>/community/boardDetail",
+					url:"<%=request.getContextPath()%>/community/boardDetailReview",
 					success:function(data) {
 						$("#fun1_result").html(data);
 					}

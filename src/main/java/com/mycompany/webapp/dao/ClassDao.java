@@ -18,7 +18,7 @@ public class ClassDao {
 	
 	//강사가 진행하고 있는 강의목록 가져오기
 	public List<ClassDto> selectTutorClass(String tutorId){
-		List<ClassDto> classList = sst.selectList("mybatis.mapper.member.selectTutorClass", tutorId);
+		List<ClassDto> classList = sst.selectList("mybatis.mapper.class.selectTutorClass", tutorId);
 		return classList;
 	}
 	

@@ -2,8 +2,9 @@
 <!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
 <mapper namespace="mybatis.mapper.class">
 
-	<select id="selectClass">
-		SELECT CLASS_NO,class_nm, TUTOR_ID FROM class where TUTOR_ID=#{tutorId}
+<!-- 강사가 진행하고 있는 강의 목록 가져오기 -->
+	<select id="selectTutorClass" parameterType="class" resultType="class">
+		SELECT CLASS_NO,class_nm, TUTOR_ID FROM class where TUTOR_ID=#{tutor_id}
 	</select>
 
 </mapper>

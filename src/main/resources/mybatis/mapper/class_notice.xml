@@ -1,3 +1,24 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
-<mapper namespace="mybatis.mapper.class_notice"></mapper>
+<mapper namespace="mybatis.mapper.class_notice">
+
+	<select id="selectNotice" parameterType="String" resultType="classNotice">
+		SELECT  CLASS_NOTICE_NO, CLASS_NOTICE_DATE, CLASS_NOTICE_TITLE, CLASS_NOTICE_CONTENT
+		FROM class_notice
+		where  CLASS_NOTICE_NO=#{class_notice_no}
+	</select>
+	
+	<insert id="insertNotice" parameterType="classNotice">
+	
+	</insert>
+	
+	<delete id="deleteNotice" parameterType="int">
+	
+	</delete>
+	
+	<update id="updateNotice" parameterType="classNotice">
+	
+	</update>	
+
+
+</mapper>

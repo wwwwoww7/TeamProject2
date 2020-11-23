@@ -17,7 +17,7 @@ public class ClassQADao {
 	
 	//사용자가 문의한 내역 가져오기
 	public List<ClassQADto> selectMyQa(String user_id){
-		List<ClassQADto> qaList = sst.selectList("mybatis.mapper.member.selectMyQa", user_id);
+		List<ClassQADto> qaList = sst.selectList("mybatis.mapper.class_QA.selectMyQa", user_id);
 		return qaList;
 	}
 	

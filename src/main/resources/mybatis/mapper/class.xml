@@ -3,7 +3,7 @@
 <mapper namespace="mybatis.mapper.class">
 
 	<select id="selectClass">
-		SELECT CLASS_NO,class_nm FROM class
+		SELECT CLASS_NO,class_nm, TUTOR_ID FROM class where TUTOR_ID=#{tutorId}
 	</select>
 
 </mapper>

@@ -1,5 +1,5 @@
 package com.mycompany.webapp.dto;
 
-public class ClassC {
+public class ClassDto {
 
 }

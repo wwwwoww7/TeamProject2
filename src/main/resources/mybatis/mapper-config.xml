@@ -6,7 +6,10 @@
 		<typeAlias alias="cart" type="com.mycompany.webapp.dto.CartDto" />
 		<typeAlias alias="user" type="com.mycompany.webapp.dto.User" />
 		<typeAlias alias="class" type="com.mycompany.webapp.dto.ClassDto" />
-		
+		<typeAlias alias="classQa" type="com.mycompany.webapp.dto.ClassQADto" />
+		<typeAlias alias="classNotice" type="com.mycompany.webapp.dto.ClassNoticeDto" />
+		<typeAlias alias="pick" type="com.mycompany.webapp.dto.PickDto" />
+		<typeAlias alias="classAppl" type="com.mycompany.webapp.dto.ClassApplDto" />
 	</typeAliases>
 </configuration>
 

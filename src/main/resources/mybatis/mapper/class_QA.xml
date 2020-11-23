@@ -2,7 +2,7 @@
 <!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
 <mapper namespace="mybatis.mapper.class_QA">
 
-	<select id="selectMyQa">
+	<select id="selectMyQa" parameterType="classQa">
 		SELECT c.class_nm, CLASS_QA_CATE, CLASS_QA_TITLE, CLASS_QA_DATE, CLASS_QA_CONTENT, CLASS_QA_ANSWER, WRITER_ID  
 		FROM class_qa qa, class c
 		where qa.class_no = c.class_no 

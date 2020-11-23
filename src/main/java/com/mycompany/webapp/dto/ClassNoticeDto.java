@@ -1,5 +1,5 @@
 package com.mycompany.webapp.dto;
 
-public class ClassQA {
+public class ClassNoticeDto {
 
 }

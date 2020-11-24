@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE configuration PUBLIC "-//mybatis.org//DTD Config 3.0//EN" 
+							   "http://mybatis.org/dtd/mybatis-3-config.dtd">
+<configuration>
+	<typeAliases>
+		<typeAlias alias="cart" type="com.mycompany.webapp.dto.CartDto" />
+		<typeAlias alias="user" type="com.mycompany.webapp.dto.UserDto" />
+		<typeAlias alias="class" type="com.mycompany.webapp.dto.ClassDto" />
+		<typeAlias alias="classQa" type="com.mycompany.webapp.dto.ClassQADto" />
+		<typeAlias alias="classNotice" type="com.mycompany.webapp.dto.ClassNoticeDto" />
+		<typeAlias alias="pick" type="com.mycompany.webapp.dto.PickDto" />
+		<typeAlias alias="classAppl" type="com.mycompany.webapp.dto.ClassApplDto" />
+		<typeAlias alias="communityDto" type="com.mycompany.webapp.dto.CommunityDto" />
+		<typeAlias alias="review" type="com.mycompany.webapp.dto.ReviewDto" />
+		<typeAlias alias="communityPager" type="com.mycompany.webapp.dto.CommunityPagerDto" />
+	</typeAliases>
+</configuration>
+
